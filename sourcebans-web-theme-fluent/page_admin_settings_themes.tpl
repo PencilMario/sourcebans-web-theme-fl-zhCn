@@ -1,5 +1,5 @@
 <div class="admin_tab_content_title">
-    <h2><i class="fas fa-paint-roller"></i> Selected Theme :</h2>
+    <h2><i class="fas fa-paint-roller"></i>当前主题 ：</h2>
 </div>
 
 <div class="padding">
@@ -14,15 +14,15 @@
 
         <ul class="theme_list">
             <li>
-                <h3>Theme Author:</h3>
+                <h3>主题作者：</h3>
                 <span id="theme.auth">{$theme_author}</span>
             </li>
             <li>
-                <h3>Theme Version:</h3>
+                <h3>主题版本：</h3>
                 <span id="theme.vers">{$theme_version}</span>
             </li>
             <li>
-                <h3>Theme Link:</h3>
+                <h3>主题链接：</h3>
                 <span id="theme.link">
                     <a href="{$theme_link}" target="_new">{$theme_link}</a>
                 </span>
@@ -32,12 +32,12 @@
 </div>
 
 <div class="admin_tab_content_title">
-    <h2>Available Themes</h2>
+    <h2>可用主题</h2>
 </div>
 
 <div class="padding">
     <div>
-        Click a theme below to see details about it.
+        点击下面的主题查看详细信息。
     </div>
 
     <ul class="margin-top">

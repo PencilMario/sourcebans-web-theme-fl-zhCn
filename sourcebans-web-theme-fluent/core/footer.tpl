@@ -5,11 +5,13 @@
 	  <div class="layout_container flex flex-jc:space-between flex-ai:center">
 	    <div class="flex flex-fd:column text:left">
 	      <a href="https://sbpp.github.io/" target="_blank" rel="noopener">SourceBans++</a> {$version}{$git}
-	      <span>Powered by <a href="https://www.sourcemod.net" target="_blank" rel="noopener">SourceMod</a></span>
+	      <span>技术支持<a href="https://www.sourcemod.net" target="_blank" rel="noopener">SourceMod</a></span>
 	    </div>
 	    <div class="flex flex-fd:column text:right">
-	      <span>Copyright © {Config::get('template.title')}</span>
-	      <span><i class="fas fa-code"></i> Original <a href="https://github.com/Rushaway/sourcebans-web-theme-fluent" title="Theme Fluent for SourceBans++" target="_blank" rel="noopener">Theme</a> by <a href="https://axendev.net/" title="Theme by aXenDev" target="_blank" rel="noopener">aXenDev</a></span>
+	      <span>版权所有{Config::get('template.title')}</span>
+	      <span><i class="fas fa-code"></i>原版<a href="https://github.com/Rushaway/sourcebans-web-theme-fluent" title="Theme Fluent for SourceBans++" target="_blank" rel="noopener">主题</a> by <a href="https://axendev.net/" title="Theme by aXenDev" target="_blank" rel="noopener">aXenDev</a></span>
+		  <span><i class="fas fa-code"></i>中文翻译<a href="https://github.com/PencilMario/sourcebans-web-theme-fluent" title="Theme Fluent for SourceBans++" target="_blank" rel="noopener">主题</a> by <a href="https://axendev.net/" title="Theme by aXenDev" target="_blank" rel="noopener">Sir.P</a></span>
+
 	    </div>
 	  </div>
 	</footer>

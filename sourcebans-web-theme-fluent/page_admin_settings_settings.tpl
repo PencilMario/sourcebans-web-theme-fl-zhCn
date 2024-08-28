@@ -1,51 +1,50 @@
 <form action="" method="post">
     <input type="hidden" name="settingsGroup" value="mainsettings" />
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-cogs"></i> Main Settings</h2>
+        <h2><i class="fas fa-cogs"></i>主要设置</h2>
     </div>
 
     <div class="padding">
         <div class="margin-bottom">
-            For more information or help regarding a certain subject move your mouse over the
-            question mark.
+            如需有关某一主题的更多信息或帮助，请将鼠标移至问号上。
         </div>
 
         <div class="margin-bottom:half">
             <label for="template_title" class="form-label form-label:bottom">
-                Title
+                标题
             </label>
 
             <input type="text" TABINDEX=1 class="form-input form-full" id="template_title" name="template_title"
                 value="{$config_title}" />
 
             <div class="form-desc">
-                Define the title shown in the title of your browser.
+                定义浏览器中显示的标题。
             </div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="template_logo" class="form-label form-label:bottom">
-                Path to logo
+                logo路径
             </label>
 
             <input type="text" TABINDEX=2 class="form-input form-full" id="template_logo" name="template_logo"
                 value="{$config_logo}" />
 
             <div class="form-desc">
-                Here you can define a new location for the logo, so you can use your own image.
+                您可以在此为logo定义新的位置，这样您就可以使用自己的图片。
             </div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="config_password_minlength" class="form-label form-label:bottom">
-                Min password length
+                最小密码长度
             </label>
 
             <input type="text" TABINDEX=3 class="form-input form-full" id="config_password_minlength"
                 name="config_password_minlength" value="{$config_min_password}" />
 
             <div class="form-desc">
-                Define the shortest length a password can be.
+                定义密码的最短长度。
             </div>
 
             <div id="minpasslength.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -53,46 +52,46 @@
 
         <div class="margin-bottom:half">
             <label for="config_dateformat" class="form-label form-label:bottom">
-                Date format <a href="http://www.php.net/date" target="_blank" rel="noopener">See: PHP date()</a>
+                日期格式<a href="http://www.php.net/date" target="_blank" rel="noopener">参见：PHP date()</a>
             </label>
 
             <input type="text" TABINDEX=4 class="form-input form-full" id="config_dateformat" name="config_dateformat"
                 value="{$config_dateformat}" />
 
             <div class="form-desc">
-                Here you can change the date format, displayed in the banlist and other pages.
+                您可以在此更改封禁列表和其他页面中显示的日期格式。
             </div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="auth_maxlife" class="form-label form-label:bottom">
-                Auth Maxlife <span class="text:italic">(in minutes)</span>
+                登录过期时间<span class="text:italic"（分钟）</span>
             </label>
 
             <input type="text" TABINDEX=4 class="form-input form-full" id="auth_maxlife" name="auth_maxlife"
                 value="{$auth_maxlife}" />
 
             <div class="form-desc">
-                Max lifetime for auth tokens.
+                授权令牌的最长使用时间。
             </div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="auth_maxlife_remember" class="form-label form-label:bottom">
-                Auth Maxlife (remember me) <span class="text:italic">(in minutes)</span>
+                登录过期时间（记住登录）<span class="text:italic">（分钟）</span>
             </label>
 
             <input type="text" TABINDEX=4 class="form-input form-full" id="auth_maxlife_remember"
                 name="auth_maxlife_remember" value="{$auth_maxlife_remember}" />
 
             <div class="form-desc">
-                Max lifetime for auth tokens with remember me enabled.
+                启用 "记住登录" 后，授权令牌的最长使用时间。
             </div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="auth_maxlife_steam" class="form-label form-label:bottom">
-                Auth Maxlife (steam login) <span class="text:italic">(in minutes)</span>
+                授权令牌（Steam登录）<span class="text:italic">（分钟）</span>
             </label>
 
 
@@ -100,7 +99,7 @@
                 value="{$auth_maxlife_steam}" />
 
             <div class="form-desc">
-                Max lifetime for auth tokens via steam login.
+                通过Steam登录的授权令牌的最长使用期限。
             </div>
         </div>
 
@@ -108,30 +107,30 @@
             <input type="checkbox" TABINDEX=6 name="config_debug" class="form-check" id="config_debug" />
 
             <label for="config_debug" class="form-label form-label:left">
-                Debugmode
+                调试模式
             </label>
 
             <div class="form-desc">
-                Check this box to enable the debugmode permanently.
+                选中该复选框可永久启用调试模式。
             </div>
         </div>
     </div>
 
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-home"></i> Dashboard Settings</h2>
+        <h2><i class="fas fa-home"></i>仪表板设置</h2>
     </div>
 
     <div class="padding">
         <div class="margin-bottom:half">
             <label for="dash_intro_title" class="form-label form-label:bottom">
-                Intro Title
+                介绍标题
             </label>
 
             <input type="text" TABINDEX=7 class="form-input form-full" id="dash_intro_title" name="dash_intro_title"
                 value="{$config_dash_title}" />
 
             <div class="form-desc">
-                Set the title for the dashboard introduction.
+                设置仪表板介绍的标题。
             </div>
 
             <div id="dash.intro.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -139,14 +138,14 @@
 
         <div class="margin-bottom:half">
             <label for="dash_intro_text" class="form-label form-label:bottom">
-                Intro Text
+                介绍文本
             </label>
 
             <textarea TABINDEX=6 cols="80" rows="20" class="form-text" id="dash_intro_text"
                 name="dash_intro_text">{$config_dash_text}</textarea>
 
             <div class="form-desc">
-                Set the text for the dashboard introduction.
+                设置仪表盘介绍的文本。
             </div>
         </div>
 
@@ -154,17 +153,17 @@
             <input type="checkbox" TABINDEX=8 name="dash_nopopup" class="form-check" id="dash_nopopup" />
 
             <label for="dash_nopopup" class="form-label form-label:left">
-                Disable Log Popup
+                禁用日志弹出窗口
             </label>
 
             <div class="form-desc">
-                Check this box to disable the log info popup and use direct link.
+                选中此复选框可禁用日志信息弹出窗口并使用直接链接。
             </div>
         </div>
     </div>
 
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-sliders-h"></i> Page Settings</h2>
+        <h2><i class="fas fa-sliders-h"></i>页面设置</h2>
     </div>
 
     <div class="padding">
@@ -172,11 +171,11 @@
             <input type="checkbox" TABINDEX=9 name="enable_protest" class="form-check" id="enable_protest" />
 
             <label for="enable_protest" class="form-label form-label:left">
-                Enable Protest Ban
+                启用封禁申诉
             </label>
 
             <div class="form-desc">
-                Check this box to enable the protest ban page.
+                选中此复选框可启用封禁申诉页面。
             </div>
         </div>
 
@@ -184,11 +183,11 @@
             <input type="checkbox" TABINDEX=10 name="enable_submit" class="form-check" id="enable_submit" />
 
             <label for="enable_submit" class="form-label form-label:left">
-                Enable Submit Ban
+                启用举报玩家
             </label>
 
             <div class="form-desc">
-                Check this box to enable the submit ban page.
+                选中此复选框可启用提交举报玩家页面。
             </div>
         </div>
 
@@ -196,11 +195,11 @@
             <input type="checkbox" TABINDEX=10 name="enable_commslist" class="form-check" id="enable_commslist" />
 
             <label for="enable_commslist" class="form-label form-label:left">
-                Enable Commslist
+                启用禁言列表
             </label>
 
             <div class="form-desc">
-                Check this box to enable the commslist page.
+                选中此复选框可启用禁言列表页面。
             </div>
         </div>
 
@@ -209,42 +208,41 @@
                 id="protest_emailonlyinvolved" />
 
             <label for="protest_emailonlyinvolved" class="form-label form-label:left">
-                Only Send One Email
+                只发送一封邮件
             </label>
 
             <div class="form-desc">
-                Check this box to only send the protest notification email to the admin who banned the protesting
-                player.
+                选中此复选框可只向禁止抗议玩家的管理员发送抗议通知邮件。
             </div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="default_page" class="form-label form-label:bottom">
-                Default Page
+                默认页
             </label>
 
             <select class="form-select form-full" TABINDEX=11 name="default_page" id="default_page">
-                <option value="0">Dashboard</option>
-                <option value="1">Ban List</option>
-                <option value="2">Servers</option>
-                <option value="3">Submit a ban</option>
-                <option value="4">Protest a ban</option>
+                <option value="0">主页</option>
+                <option value="1">封禁列表</option>
+                <option value="2">服务器</option>
+                <option value="3">举报</option>
+                <option value="4">申诉</option>
             </select>
 
             <div class="form-desc">
-                Choose the page that will be the first page people will see.
+                选择人们将首先看到的页面。
             </div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="clearcache" class="form-label form-label:bottom">
-                Clear Cache
+                清除缓存
             </label>
 
             {sb_button text="Clear Cache" onclick="xajax_ClearCache();" class="button button-light" id="clearcache" submit=false}
 
             <div class="form-desc">
-                Click this button, to clean the cache folder.
+                单击此按钮，清理缓存文件夹。
             </div>
 
             <div id="clearcache.msg"></div>
@@ -252,20 +250,20 @@
     </div>
 
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-ban"></i> Banlist Settings</h2>
+        <h2><i class="fas fa-ban"></i>封禁列表设置</h2>
     </div>
 
     <div class="padding">
         <div class="margin-bottom:half">
             <label for="banlist_bansperpage" class="form-label form-label:bottom">
-                Items Per Page
+                每页项目
             </label>
 
             <input type="text" TABINDEX=12 class="form-input form-full" id="banlist_bansperpage"
                 name="banlist_bansperpage" value="{$config_bans_per_page}" />
 
             <div class="form-desc">
-                Choose how many items to show on each page.
+                选择每页显示的项目数量。
             </div>
 
             <div id="bansperpage.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -275,11 +273,11 @@
             <input type="checkbox" TABINDEX=13 name="banlist_hideadmname" class="form-check" id="banlist_hideadmname" />
 
             <label for="banlist_hideadmname" class="form-label form-label:left">
-                Hide Admin Name
+                隐藏管理员姓名
             </label>
 
             <div class="form-desc">
-                Check this box, if you want to hide the name of the admin in the baninfo.
+                如果想在 baninfo 中隐藏管理员姓名，请选中此复选框。
             </div>
 
             <div id="banlist_hideadmname.msg" class="message message:error margin-top:half" style="display: none;">
@@ -291,12 +289,12 @@
                 id="banlist_nocountryfetch" />
 
             <label for="banlist_nocountryfetch" class="form-label form-label:left">
-                No Country Research
+                不显示国家
             </label>
 
             <div class="form-desc">
-                Check this box, if you don't want to display the country out of an IP in the banlist. Use if you
-                encounter display problems.
+                如果不想在禁止列表中显示 IP 的国家/地区，请选中此复选框。如果
+                遇到显示问题时使用。
             </div>
 
             <div id="banlist_nocountryfetch.msg" class="message message:error margin-top:half" style="display: none;">
@@ -308,11 +306,11 @@
                 id="banlist_hideplayerips" />
 
             <label for="banlist_hideplayerips" class="form-label form-label:left">
-                Hide Player IP
+                隐藏玩家 IP
             </label>
 
             <div class="form-desc">
-                Check this box, if you want to hide the player IP from the public.
+                如果要向公众隐藏玩家 IP，请选中此复选框。
             </div>
 
             <div id="banlist_hideplayerips.msg" class="message message:error margin-top:half" style="display: none;">
@@ -321,7 +319,7 @@
 
         <div class="margin-bottom:half">
             <label for="banlist_hideplayerips" class="form-label form-label:right">
-                Custom Banreasons
+                定制 Banreasons
             </label>
 
             <table width="100%" border="0" style="border-collapse:collapse;" id="custom.reasons" name="custom.reasons">
@@ -341,7 +339,7 @@
             <a href="javascript:void(0)" onclick="MoreFields();" title="Add more fields">[+]</a>
 
             <div class="form-desc">
-                Type the custom banreasons you want to appear in the dropdown menu.
+                在下拉菜单中输入您希望出现的自定义禁止原因。
             </div>
 
             <div id="bans_customreason.msg" class="message message:error margin-top:half" style="display: none;">
@@ -350,24 +348,24 @@
     </div>
     
 	<div class="admin_tab_content_title">
-        <h2><i class="fa-solid fa-paper-plane"></i></i> Mails Settings</h2>
+        <h2><i class="fa-solid fa-paper-plane"></i></i>邮件设置</h2>
     </div>
 
     <div class="padding">
         <div class="margin-bottom">
-            If leave blank, mails functions will not work and return an error 500.
+            如果留空，邮件功能将不起作用并返回错误 500。
         </div>
 
         <div class="margin-bottom:half">
             <label for="mail_host" class="form-label form-label:bottom">
-                Host
+                主机
             </label>
 
             <input type="text" TABINDEX=16 class="form-input form-full" id="mail_host" name="mail_host"
                 value="{$config_smtp[0]}" />
 
             <div class="form-desc">
-                Enter your Host.
+                输入您的主机。
             </div>
 			
 			<div id="mailhost.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -375,14 +373,14 @@
 
         <div class="margin-bottom:half">
             <label for="mail_user" class="form-label form-label:bottom">
-                UserName
+                用户名
             </label>
 
             <input type="text" TABINDEX=17 class="form-input form-full" id="mail_user" name="mail_user"
                 value="{$config_smtp[1]}" />
 
             <div class="form-desc">
-                Enter your UserName.
+                输入您的用户名。
             </div>
 			
 			<div id="mail_user.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -390,14 +388,14 @@
 
         <div class="margin-bottom:half">
             <label for="mail_pass" class="form-label form-label:bottom">
-                Password
+                密码
             </label>
 
             <input type="text" TABINDEX=18 class="form-input form-full" id="mail_pass"
                 name="mail_pass" placeholder="*******" />
 
             <div class="form-desc">
-                Enter your password.
+                输入您的密码。
             </div>
 
             <div id="mail_pass.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -405,14 +403,14 @@
 		
 		<div class="margin-bottom:half">
             <label for="mail_port" class="form-label form-label:bottom">
-                Port
+                端口
             </label>
 
             <input type="text" TABINDEX=19 class="form-input form-full" id="mail_port"
                 name="mail_port" value="{$config_smtp[2]}" />
 
             <div class="form-desc">
-                Enter the port used.
+                输入使用的端口。
             </div>
 
             <div id="mail_port.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -422,11 +420,11 @@
 			<input type="checkbox" TABINDEX=20 name="mail_verify_peer" class="form-check" id="mail_verify_peer" />
 			
             <label for="mail_verify_peer" class="form-label form-label:bottom">
-                Verify SSL Certificate
+                验证 SSL 证书
             </label>
 
             <div class="form-desc">
-                Require verification of SSL certificate used.
+                要求验证所使用的 SSL 证书。
             </div>
 
             <div id="mail_verify_peer.msg" class="message message:error margin-top:half" style="display: none;"></div>

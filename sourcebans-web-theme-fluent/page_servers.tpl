@@ -2,20 +2,20 @@
 	<div class="table table_box">
 		{if $IN_SERVERS_PAGE && $access_bans}
 		<div class="responsive_show:desktop" style="text-align:right; width:100%">
-			<small>Hint: Right-click on a player to open a context menu with options to kick, ban, or contact the player directly.</small>
+			<small>提示：右键单击玩家可打开上下文菜单，其中包含踢人、封禁或直接联系玩家的选项。</small>
 		</div>
 		{/if}
 		<table>
 			<thead>
 				<tr>
 					<th>MOD</th>
-					<th>OS</th>
+					<th>操作系统</th>
 					<th>VAC</th>
-					<th class="text:left">Hostname</th>
-					<th class="text:left">IP address</th>
-					<th>Players</th>
-					<th>Map</th>
-					<th class="responsive_show:desktop">Connect</th>
+					<th class="text:left">主机名</th>
+					<th class="text:left">IP 地址</th>
+					<th>玩家</th>
+					<th>地图</th>
+					<th class="responsive_show:desktop">连接</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -26,13 +26,13 @@
 				</td>
 				<td id="os_{$server.sid}" class="text:center"></td>
 				<td id="vac_{$server.sid}" class="text:center"></td>
-				<td id="host_{$server.sid}"><i>Querying Server Data...</i></td>
+				<td id="host_{$server.sid}"><i>查询服务器数据...</i></td>
 				<td>{$server.ip}:{$server.port}</td>
-				<td id="players_{$server.sid}" class="text:center">N/A</td>
-				<td id="map_{$server.sid}" class="text:center">N/A</td>
+				<td id="players_{$server.sid}" class="text:center">不适用</td>
+				<td id="map_{$server.sid}" class="text:center">不适用</td>
 				<td class="text:center responsive_show:desktop">
 					<a class="button button-success" href="steam://connect/{$server.ip}:{$server.port}"><i
-						class="fa fa-sign-in"></i> Connect</a>
+						class="fa fa-sign-in"></i>连接</a>
 				</td>
 				</tr>
 				<tr>
@@ -52,7 +52,7 @@
 							</div>
 							<div id="noplayer_{$server.sid}" name="noplayer_{$server.sid}" style="display:none;">
 								<br />
-								<h2>No players in the server</h2>
+								<h2>服务器中没有玩家</h2>
 								<br />
 							</div>
 						</div>

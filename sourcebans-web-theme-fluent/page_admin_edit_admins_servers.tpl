@@ -1,22 +1,22 @@
 <div class="layout_box flex:11 admin_tab_content">
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-server"></i> Admin Server Access</h2>
+        <h2><i class="fas fa-server"></i>管理服务器访问权限</h2>
     </div>
 
     <div class="padding">
         <div>
-            Please select the servers and/or groups of servers you want this admin to have access to.
+            请选择希望该管理员访问的服务器和/或服务器组。
         </div>
 
-        {if $row_count < 1}
+        {if $row_count< 1}
             <div class="message message:error margin-top:half">
-                You need to add a server or a server group, before you can setup
-                admin server permissions
+                您需要添加服务器或服务器组，然后才能设置
+                管理员服务器权限
             </div>
         {else}
             <form action="" method="post">
                 {if $group_list}
-                    <h3>Server Groups</h3>
+                    <h3>服务器组</h3>
 
                     {foreach from=$group_list item="group"}
                         <div class="margin-bottom:half">
@@ -30,14 +30,14 @@
                 {/if}
 
                 {if $server_list}
-                    <h3>Servers</h3>
+                    <h3>服务器</h3>
 
                     {foreach from=$server_list item="server"}
                         <div class="margin-bottom:half">
                             <input type="checkbox" class="form-check" name="servers[]" id="server_{$server.sid}"
                                 value="s{$server.sid}" onclick="" />
                             <label for="server_{$server.sid}" id="host_{$server.sid}" class="form-label:left">
-                                Please Wait...
+                                请稍候...
                             </label>
                         </div>
                     {/foreach}
@@ -56,11 +56,11 @@
 
         <script>
             {foreach from=$assigned_servers item="asrv"}
-                if($('server_{$asrv.0}'))$('server_{$asrv.0}').checked = true;
+                if($('server_{$asrv.0}'))$('服务器_{$asrv.0}').checked = true;
                 if($('group_{$asrv[1]}'))$('group_{$asrv[1]}').checked = true;
             {/foreach}
             {foreach from=$server_list item="server"}
-                xajax_ServerHostPlayers({$server.sid}, "id", "host_{$server.sid}");
+                xajax_ServerHostPlayers({$server.sid}，"id"，"host_{$server.sid}");
             {/foreach}
         </script>
     </div>

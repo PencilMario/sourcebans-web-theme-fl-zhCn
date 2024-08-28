@@ -81,15 +81,15 @@
       <ul class="layout_topBar_userBar responsive_show:desktop flex flex-ai:center">
         {if $login}
           <li class="margin-right">
-            Welcome, <a href='index.php?p=account'><i class="fas fa-user"></i> {$username}</a>
+            欢迎<a href='index.php?p=account'><i class="fas fa-user"></i> {$username}</a>
           </li>
           <li>
             <a class="button button-important" href='index.php?p=logout'><i class="fas fa-sign-out-alt"></i>
-              Logout</a>
+              注销</a>
           </li>
         {else}
           <li>
-            <a class="button button-success" href='index.php?p=login'>Existing user? Sign In</a>
+            <a class="button button-success" href='index.php?p=login'>已有账号？登录</a>
           </li>
         {/if}
       </ul>
@@ -109,9 +109,9 @@
       <div class="nav_mobile_tab_top padding flex">
         {if $login}
           <a class="button button-important button:full" href='index.php?p=logout'><i class="fas fa-sign-out-alt"></i>
-            Logout</a>
+            注销</a>
         {else}
-          <a class="button button-success button:full" href='index.php?p=login'>Existing user? Sign In</a>
+          <a class="button button-success button:full" href='index.php?p=login'>已有账号？登录</a>
         {/if}
       </div>
       <nav class="nav_mobile_tab_nav">
@@ -144,7 +144,7 @@
             <ul>
                 {if $login}
                     <li class="margin-right">
-                        <a href='index.php?p=account'><i class="fa-solid fa-gear"></i> Account Settings</a>
+                        <a href='index.php?p=account'><i class="fa-solid fa-gear"></i>账户设置</a>
                     </li>
                 {/if}
                     {foreach from=$navbar item="nav"}

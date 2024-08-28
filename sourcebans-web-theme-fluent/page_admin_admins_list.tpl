@@ -1,13 +1,13 @@
 <div class="layout_box flex:11 admin_tab_content tabcontent" id="List admins" style="display: block;">
     {if not $permission_listadmin}
-        Access Denied
+        拒绝访问
     {else}
         <div class="admin_tab_content_title">
-            <h2><i class="fas fa-user-shield"></i> Admins - {$admin_count}</h2>
+            <h2><i class="fas fa-user-shield"></i>管理员 -{$admin_count}</h2>
         </div>
 
         <div class="padding">
-            <span>Click on an admin to see more detailed information and actions to perform on them.</span>
+            <span>点击管理员可查看更详细的信息和对其执行的操作。</span>
 
             {load_template file="admin.admins.search"}
 
@@ -20,18 +20,18 @@
                     <table class="table_box">
                         <thead>
                             <tr>
-                                <th class="text:left">Name</th>
-                                <th class="text:left">Server Admin Group</th>
-                                <th class="text:left">Web Admin Group</th>
-                                <th class="text:left">Immunity Level</th>
-                                <th class="text:left">Last Visited</th>
+                                <th class="text:left">名称</th>
+                                <th class="text:left">服务器管理组</th>
+                                <th class="text:left">在线管理组</th>
+                                <th class="text:left">豁免级别</th>
+                                <th class="text:left">最近访问</th>
                             </tr>
                         </thead>
                         <tbody>
                             {foreach from=$admins item="admin"}
                                 <tr class="collapse">
                                     <td>{$admin.user} (<a href="./index.php?p=banlist&advSearch={$admin.aid}&advType=admin"
-                                            title="Show bans">{$admin.bancount} bans</a> | <a
+                                            title="Show bans">{$admin.bancount}封禁</a> | <a
                                             href="./index.php?p=banlist&advSearch={$admin.aid}&advType=nodemo"
                                             title="Show bans without demo">{$admin.nodemocount} w.d.</a>)</td>
                                     <td>{$admin.server_group}</td>
@@ -47,56 +47,56 @@
                                                     {if $permission_editadmin}
                                                         <li class="button button-light">
                                                             <a href="index.php?p=admin&c=admins&o=editdetails&id={$admin.aid}">
-                                                                <i class="fas fa-clipboard-list"></i> Edit Details
+                                                                <i class="fas fa-clipboard-list"></i>编辑详情
                                                             </a>
                                                         </li>
                                                         <li class="button button-light">
                                                             <a href="index.php?p=admin&c=admins&o=editpermissions&id={$admin.aid}">
-                                                                <i class="fas fa-edit fa-lg"></i> Edit Permissions
+                                                                <i class="fas fa-edit fa-lg"></i>编辑权限
                                                             </a>
                                                         </li>
                                                         <li class="button button-light">
                                                             <a href="index.php?p=admin&c=admins&o=editservers&id={$admin.aid}">
-                                                                <i class="fas fa-server"></i> Edit Server Access
+                                                                <i class="fas fa-server"></i>编辑服务器分配
                                                             </a>
                                                         </li>
                                                         <li class="button button-light">
                                                             <a href="index.php?p=admin&c=admins&o=editgroup&id={$admin.aid}">
-                                                                <i class="fas fa-users"></i> Edit Groups
+                                                                <i class="fas fa-users"></i>编辑所属组
                                                             </a>
                                                         </li>
                                                     {/if}
                                                     {if $permission_deleteadmin}
                                                         <li class="button button-important">
                                                             <a href="#" onclick="RemoveAdmin({$admin.aid}, '{$admin.user}');">
-                                                                <i class="fas fa-trash"></i> Delete Admin
+                                                                <i class="fas fa-trash"></i>删除管理员
                                                             </a>
                                                         </li>
                                                     {/if}
                                                 </ul>
 
                                                 <div class="flex:11 margin-right">
-                                                    <h3>Server Admin Permissions</h3>
+                                                    <h3>服务器管理权限</h3>
                                                     <ul>
                                                         {if $admin.server_flag_string}
                                                             {foreach from=$admin.server_flag_string item="permission"}
                                                                 <li>{$permission}</li>
                                                             {/foreach}
                                                         {else}
-                                                            <li>None</li>
+                                                            <li>无</li>
                                                         {/if}
                                                     </ul>
                                                 </div>
 
                                                 <div class="flex:11">
-                                                    <h3>Web Admin Permissions</h3>
+                                                    <h3>在线管理员权限</h3>
                                                     <ul>
                                                         {if $admin.web_flag_string}
                                                             {foreach from=$admin.web_flag_string item="permission"}
                                                                 <li>{$permission}</li>
                                                             {/foreach}
                                                         {else}
-                                                            <li>None</li>
+                                                            <li>无</li>
                                                         {/if}
                                                     </ul>
                                                 </div>

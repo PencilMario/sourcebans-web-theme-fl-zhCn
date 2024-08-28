@@ -3,22 +3,22 @@
     <div id="0">
         <div id="msg-green" style="display:none;">
             <i class="fas fa-check fa-2x"></i>
-            <b>Ban Updated</b>
+            <b>封禁更新</b>
             <br />
-            The ban details have been updated.<br /><br />
-            <i>Redirecting back to bans page</i>
+            封禁详情已更新。<br /><br />
+            <i>重定向回禁言页面</i>
         </div>
         <div class="admin_tab_content_title">
-            <h2><i class="fas fa-user-edit"></i> Ban Details</h2>
+            <h2><i class="fas fa-user-edit"></i>禁止详情</h2>
 		</div>
 		<div class="padding">
-            For more information or help regarding a certain subject move your mouse over the question mark.<br /><br />
+            如需有关某一主题的更多信息或帮助，请将鼠标移至问号上。<br /><br />
             <input type="hidden" name="insert_type" value="add">
             <table width="90%" border="0" style="border-collapse:collapse;" id="group.details" cellpadding="3">
                 <tr>
                     <td valign="top" width="35%">
                         <div class="rowdesc">
-                            -{help_icon title="Player name" message="This is the name of the player that was banned."}-Player name
+                            -{help_icon title="Player name" message="This is the name of the player that was banned."}-玩家姓名
                         </div>
                     </td>
                     <td>
@@ -30,14 +30,14 @@
                     <tr>
                     <td valign="top" width="35%">
                         <div class="rowdesc">
-                            -{help_icon title="Ban Type" message="Choose whether to ban by Steam ID or IP address."}-Ban Type
+                            -{help_icon title="Ban Type" message="Choose whether to ban by Steam ID or IP address."}-封禁类型
                         </div>
                     </td>
                     <td>
                         <div align="left">
                             <select id="type" name="type" TABINDEX=2 class="submit-fields">
                                 <option value="0">Steam ID</option>
-                                <option value="1">IP Address</option>
+                                <option value="1">IP 地址</option>
                             </select>
                         </div>
                     </td>
@@ -58,7 +58,7 @@
                 <tr>
                     <td valign="top" width="35%">
                         <div class="rowdesc">
-                            -{help_icon title="IP" message="This is the IP of the player that is banned"}-IP Address
+                            -{help_icon title="IP" message="This is the IP of the player that is banned"}-IP 地址
                         </div>
                     </td>
                     <td>
@@ -71,31 +71,31 @@
                 <tr>
                     <td valign="top" width="35%">
                         <div class="rowdesc">
-                            -{help_icon title="Reason" message="The reason that this player was banned."}-Reason
+                            -{help_icon title="Reason" message="The reason that this player was banned."}-理由
                         </div>
                     </td>
                     <td>
                         <div align="left">
                             <select id="listReason" name="listReason" TABINDEX=4 class="submit-fields" onChange="changeReason(this[this.selectedIndex].value);">
-                                <option value="" selected> -- Select Reason -- </option>
+                                <option value="" selected>-- 选择原因 --</option>
                                 <optgroup label="Hacking">
                                     <option value="Aimbot">Aimbot</option>
-                                    <option value="Antirecoil">Antirecoil</option>
-                                    <option value="Wallhack">Wallhack</option>
-                                    <option value="Spinhack">Spinhack</option>
-                                    <option value="Multi-Hack">Multi-Hack</option>
-                                    <option value="No Smoke">No Smoke</option>
-                                    <option value="No Flash">No Flash</option>
+                                    <option value="Antirecoil">无后座</option>
+                                    <option value="Wallhack">透视</option>
+                                    <option value="Spinhack">高亮</option>
+                                    <option value="Multi-Hack">多项作弊</option>
+                                    <option value="No Smoke">无烟</option>
+                                    <option value="No Flash">无闪</option>
                                 </optgroup>
                                 <optgroup label="Behavior">
-                                    <option value="Team Killing">Team Killing</option>
-                                    <option value="Team Flashing">Team Flashing</option>
-                                    <option value="Spamming Mic/Chat">Spamming Mic/Chat</option>
-                                    <option value="Inappropriate Spray">Inappropriate Spray</option>
-                                    <option value="Inappropriate Language">Inappropriate Language</option>
-                                    <option value="Inappropriate Name">Inappropriate Name</option>
-                                    <option value="Ignoring Admins">Ignoring Admins</option>
-                                    <option value="Team Stacking">Team Stacking</option>
+                                    <option value="Team Killing">TK队友</option>
+                                    <option value="Team Flashing">TF队友</option>
+                                    <option value="Spamming Mic/Chat">滥用麦克风/聊天</option>
+                                    <option value="Inappropriate Spray">不适当的喷雾</option>
+                                    <option value="Inappropriate Language">不当语言</option>
+                                    <option value="Inappropriate Name">不恰当的名称</option>
+                                    <option value="Ignoring Admins">无视管理员</option>
+                                    <option value="Team Stacking">恶意组队</option>
                                 </optgroup>
                                 -{if $customreason}-
                                 <optgroup label="Custom">
@@ -104,7 +104,7 @@
                                     -{/foreach}-
                                 </optgroup>
                                 -{/if}-
-                                <option value="other">Other Reason</option>
+                                <option value="other">其他原因</option>
                             </select>
                             <div id="dreason" style="display:none;">
                                 <textarea class="submit-fields" TABINDEX=4 cols="30" rows="5" id="txtReason" name="txtReason"></textarea>
@@ -115,47 +115,47 @@
                 </tr>
                 <tr>
                     <td valign="top" width="35%">
-                        <div class="rowdesc">-{help_icon title="Ban Length" message="Select how long you want to ban this person for."}-Ban Length </div>
+                        <div class="rowdesc">-{help_icon title="Ban Length" message="Select how long you want to ban this person for."}-封禁长度</div>
                     </td>
                     <td>
                         <div align="left">
                             <select id="banlength" name="banlength" TABINDEX=5 class="submit-fields">
-                                <option value="0">Permanent</option>
+                                <option value="0">永久</option>
                                 <optgroup label="minutes">
-                                    <option value="1">1 minute</option>
-                                    <option value="5">5 minutes</option>
-                                    <option value="10">10 minutes</option>
-                                    <option value="15">15 minutes</option>
-                                    <option value="30">30 minutes</option>
-                                    <option value="45">45 minutes</option>
+                                    <option value="1">1 分钟</option>
+                                    <option value="5">5 分钟</option>
+                                    <option value="10">10 分钟</option>
+                                    <option value="15">15 分钟</option>
+                                    <option value="30">30 分钟</option>
+                                    <option value="45">45 分钟</option>
                                 </optgroup>
                                 <optgroup label="hours">
-                                    <option value="60">1 hour</option>
-                                    <option value="120">2 hours</option>
-                                    <option value="180">3 hours</option>
-                                    <option value="240">4 hours</option>
-                                    <option value="480">8 hours</option>
-                                    <option value="720">12 hours</option>
+                                    <option value="60">1 小时</option>
+                                    <option value="120">2 小时</option>
+                                    <option value="180">3 小时</option>
+                                    <option value="240">4 小时</option>
+                                    <option value="480">8 小时</option>
+                                    <option value="720">12 小时</option>
                                 </optgroup>
                                 <optgroup label="days">
-                                    <option value="1440">1 day</option>
-                                    <option value="2880">2 days</option>
-                                    <option value="4320">3 days</option>
-                                    <option value="5760">4 days</option>
-                                    <option value="7200">5 days</option>
-                                    <option value="8640">6 days</option>
+                                    <option value="1440">1 天</option>
+                                    <option value="2880">2 天</option>
+                                    <option value="4320">3 天</option>
+                                    <option value="5760">4 天</option>
+                                    <option value="7200">5 天</option>
+                                    <option value="8640">6 天</option>
                                 </optgroup>
                                 <optgroup label="weeks">
-                                    <option value="10080">1 week</option>
-                                    <option value="20160">2 weeks</option>
-                                    <option value="30240">3 weeks</option>
+                                    <option value="10080">1 周</option>
+                                    <option value="20160">2 周</option>
+                                    <option value="30240">3 周</option>
                                     </optgroup>
                                 <optgroup label="months">
-                                    <option value="43200">1 month</option>
-                                    <option value="86400">2 months</option>
-                                    <option value="129600">3 months</option>
-                                    <option value="259200">6 months</option>
-                                    <option value="518400">12 months</option>
+                                    <option value="43200">1 个月</option>
+                                    <option value="86400">2 个月</option>
+                                    <option value="129600">3 个月</option>
+                                    <option value="259200">6 个月</option>
+                                    <option value="518400">12 个月</option>
                                 </optgroup>
                             </select>
                         </div>
@@ -165,7 +165,7 @@
                 <tr>
                     <td valign="top" width="35%">
                         <div class="rowdesc">
-                            -{help_icon title="Upload Demo" message="Click here to upload a demo with this ban submission."}-Upload Demo
+                            -{help_icon title="Upload Demo" message="Click here to upload a demo with this ban submission."}-上传Demo
                         </div>
                     </td>
                     <td>

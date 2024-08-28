@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<link rel="Shortcut Icon" href="../images/favicon.ico" />
 		<meta name="description" content="Sourcebans for website - Upload file" />
-		<title>Upload File : SourceBans</title>
+		<title>上传文件：SourceBans</title>
 		<script type="text/javascript" src="../scripts/fontawesome-all.min.js"></script>
 	</head>
 
@@ -21,8 +21,8 @@
    ">
 		<h3>{$title}</h3>
 		
-		<p>Plese select the file to upload.<br />
-		The file must either be {$formats} file format.<br />
+		<p>请选择要上传的文件。<br />
+		文件必须是{$formats}文件格式。<br />
 		<b>{$message}</b></p>
 
 		<form action="" method="POST" id="{$form_name}" enctype="multipart/form-data">
@@ -45,7 +45,7 @@
 						border: 0;
 						margin-top: 5px;"
 					type="submit">
-				<i class="fas fa-save"></i> Save
+				<i class="fas fa-save"></i>保存
 			</button>
 		</form>
 	</body>

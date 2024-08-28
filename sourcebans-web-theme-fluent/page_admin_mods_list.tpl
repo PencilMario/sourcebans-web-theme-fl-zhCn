@@ -1,19 +1,19 @@
 {if NOT $permission_listmods}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出问题了 (╯□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码：<span class="text:bold">403 禁止</span>
         </div>
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-gamepad"></i> Server Mods ({$mod_count})</h2>
+        <h2><i class="fas fa-gamepad"></i>服务器修改 ({$mod_count})</h2>
     </div>
 
     <div class="padding">
@@ -21,14 +21,14 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Mod icon</th>
-                        <th class="text:left">Name</th>
-                        <th class="text:left">Mod Folder</th>
+                        <th>MOD图标</th>
+                        <th class="text:left">名称</th>
+                        <th class="text:left">MOD文件夹</th>
                         <th>
                             <span title="SteamID Universe (X of STEAM_X:Y:Z)">SU</span>
                         </th>
                         {if $permission_editmods || $permission_deletemods}
-                            <th>Action</th>
+                            <th>操作</th>
                         {/if}
                     </tr>
                 </thead>
@@ -52,13 +52,13 @@
                                     {if $permission_editmods}
                                         <a href="index.php?p=admin&c=mods&o=edit&id={$mod.mid}"
                                             class="button button-light margin-right:half">
-                                            Edit
+                                            编辑
                                         </a>
                                     {/if}
                                     {if $permission_deletemods}
                                         <button onclick="RemoveMod('{$mod.name|escape:'quotes'|smarty_htmlspecialchars}', '{$mod.mid}');"
                                             class="button button-light">
-                                            Delete
+                                            删除
                                         </button>
                                     {/if}
                                 </td>

@@ -1,50 +1,50 @@
 {if NOT $permission_addgroup}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出问题了 (╯□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码：<span class="text:bold">403 禁止</span>
         </div>
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-users"></i> New Group</h2>
+        <h2><i class="fas fa-users"></i>新组</h2>
     </div>
 
     <div class="padding">
         <div class="margin-bottom:half">
             <label for="groupname" class="form-label form-label:bottom">
-                Group Name
+                组名
             </label>
 
             <input type="text" TABINDEX=1 class="form-input form-full" id="groupname" name="groupname" />
 
             <div class="form-desc">
-                Type the name of the new group you want to create.
+                键入要创建的新组的名称。
             </div>
             <div id="name.msg" class="message message:error margin-top:half" style="display: none;"></div>
         </div>
 
         <div class="margin-bottom:half">
             <label for="grouptype" class="form-label form-label:bottom">
-                Group Type
+                组类型
             </label>
 
             <select onchange="UpdateGroupPermissionCheckBoxes()" TABINDEX=2 class="form-select form-full" name="grouptype"
                 id="grouptype">
-                <option value="0">Please Select...</option>
-                <option value="1">Web Admin Group</option>
-                <option value="2">Server Admin Group</option>
-                <option value="3">Server Group</option>
+                <option value="0">请选择...</option>
+                <option value="1">在线管理组</option>
+                <option value="2">服务器管理组</option>
+                <option value="3">服务器组</option>
             </select>
 
             <div class="form-desc">
-                This defines the type of group you are about to create. This helps identify and catagorize the groups list.
+                这定义了您要创建的组的类型。这有助于识别和分类组列表。
             </div>
             <div id="type.msg" class="message message:info margin-top:half" style="display: none;"></div>
 

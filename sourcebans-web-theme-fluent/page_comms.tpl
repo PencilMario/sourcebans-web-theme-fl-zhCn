@@ -2,7 +2,7 @@
   <div class="flex flex-jc:center flex-ai:center">
     <div class="layout_box layout_box_medium">
       <div class="layout_box_title">
-        <h2><i class="fa-solid fa-comment"></i> {$commenttype} Comment</h2>
+        <h2><i class="fa-solid fa-comment"></i> {$commenttype}留言</h2>
       </div>
 
       <div class="padding">
@@ -23,8 +23,8 @@
           <input type="hidden" name="page" id="page" value="{$page}">
 
 		{if $canedit}
-          <a class="button button-important" onclick="history.go(-1)">Cancel</a>
-		  <a class="button button-success" onclick="ProcessComment();">Add</a>
+          <a class="button button-important" onclick="history.go(-1)">取消</a>
+		  <a class="button button-success" onclick="ProcessComment();">添加</a>
 		{/if}
         </div>
         {foreach from=$othercomments item="com"}
@@ -36,7 +36,7 @@
                     <span class=right><b>{$com.added}</b></span> 	
                 </div>
                     {$com.commenttxt}
-                    {if $com.editname != ''}<br /><br /><i>Last edit {$com.edittime} by {$com.editname}</i>{/if}
+                    {if $com.editname != ''}<br /><br /><i>{$com.editname} 最后编辑于 {$com.edittime} </i>{/if}
                 </div>
             </div>
         {/foreach}
@@ -49,7 +49,7 @@
   <div class="layout_box margin-bottom padding:half flex flex-jc:space-between flex-ai:center m:flex-fd:column">
     <span>
       <a href="index.php?p=commslist&hideinactive={if $hidetext == 'Hide'}true{else}false{/if}{$searchlink|smarty_htmlspecialchars}"
-        title="{$hidetext} inactive">{$hidetext} inactive</a> | <i>Total Blocks: {$total_bans}</i>
+        title="{$hidetext} inactive">{$hidetext}隐藏解封</a>|<i>总禁言: {$total_bans}</i>
     </span>
     <div class="pagination">
       <span>{$ban_nav}</span>
@@ -62,13 +62,13 @@
         <table class="table_box">
           <thead>
             <tr>
-              <th>MOD/Type</th>
-              <th class="text:left">Date</th>
-              <th class="text:left">Player</th>
+              <th>模式/类型</th>
+              <th class="text:left">日期</th>
+              <th class="text:left">玩家</th>
               {if !$hideadminname}
-                <th class="text:left">Admin</th>
+                <th class="text:left">管理员</th>
               {/if}
-              <th>Length</th>
+              <th>时长</th>
             </tr>
           </thead>
           <tbody>
@@ -80,7 +80,7 @@
                 <td class="text:center">{$ban.mod_icon}</td>
 				<td>{$ban.ban_date}</td>
                   {if empty($ban.player)}
-                    <td class="text:italic">No nickname present</td>
+                    <td class="text:italic">无昵称</td>
                   {else}
 				  <td>
                       {if $view_comments && $ban.commentdata != "None" && $ban.commentdata|@count > 0}
@@ -89,7 +89,7 @@
                           </div>
                       {/if}
                       {if empty($ban.player)}
-                        <span class="text:italic">No nickname present</span>
+                        <span class="text:italic">无昵称</span>
                       {else}
                         <span>{$ban.player|escape:'html'|smarty_stripslashes}</span>
                       {/if}
@@ -103,7 +103,7 @@
                         {$ban.admin|escape:'html'}
                       </span>
                     {else}
-                      <span class="text:italic">Admin deleted</span>
+                      <span class="text:italic">管理员已删除</span>
                     {/if}
                   </td>
                 {/if}
@@ -134,7 +134,7 @@
                         {/if}
 					{else}
 						<li>
-							<a class="button button-success" href='index.php?p=login'>Admin ? Sign In</a>
+							<a class="button button-success" href='index.php?p=login'>管理员登录</a>
 						</li>
 					{/if}
                       </ul>
@@ -159,112 +159,112 @@
                           {/if}
                         </ul>
                         <li>
-                          <span><i class="fas fa-user"></i> Player</span>
+                          <span><i class="fas fa-user"></i>玩家</span>
 
                           {if empty($ban.player)}
-                            <span class="text:italic">No nickname present</span>
+                            <span class="text:italic">无昵称</span>
                           {else}
                             <span>{$ban.player|escape:'html'|smarty_stripslashes}</span>
                           {/if}
                         </li>
                         <li>
-                          <span><i class="fab fa-steam-symbol"></i> Steam ID</span>
+                          <span><i class="fab fa-steam-symbol"></i>Steam ID</span>
 
                           {if empty($ban.steamid)}
-                            <span class="text:italic">No Steam ID present</span>
+                            <span class="text:italic">没有 Steam ID</span>
                           {else}
                             <span>{$ban.steamid}</span>
                           {/if}
                         </li>
                         <li>
-                          <span><i class="fab fa-steam-symbol"></i> Steam3 ID</span>
+                          <span><i class="fab fa-steam-symbol"></i>Steam3 ID</span>
 
                           {if empty($ban.steamid)}
-                            <span class="text:italic">No Steam3 ID present</span>
+                            <span class="text:italic">没有 Steam3 ID</span>
                           {else}
                             <a href="http://steamcommunity.com/profiles/{$ban.steamid3}" target="_blank"
                               rel="noopener">{$ban.steamid3}</a>
                           {/if}
                         </li>
                         <li>
-                          <span><i class="fab fa-steam-symbol"></i> Steam Community</span>
+                          <span><i class="fab fa-steam-symbol"></i>Steam 社区 ID</span>
                           {if empty($ban.steamid)}
-                            <span class="text:italic">No Steam Community ID present</span>
+                            <span class="text:italic">没有 Steam 社区 ID</span>
                           {else}
                             <a href="http://steamcommunity.com/profiles/{$ban.communityid}" target="_blank"
                               rel="noopener">{$ban.communityid}</a>
                           {/if}
                         </li>
                         <li>
-                          <span><i class="fas fa-play"></i> Invoked on</span>
+                          <span><i class="fas fa-play"></i>添加于</span>
                           <span>{$ban.ban_date}</span>
                         </li>
                         <li>
-                          <span><i class="fas fa-hourglass-half"></i> Block length</span>
+                          <span><i class="fas fa-hourglass-half"></i>禁言时长</span>
                           <span>{$ban.banlength}</span>
                         </li>
                         {if isset($ban.unbanned)}
                           <li>
-                            <span><i class="fas fa-user-shield"></i> Unblock reason</span>
+                            <span><i class="fas fa-user-shield"></i>解封原因</span>
                             {if !isset($ban.ureason) || $ban.ureason == ""}
-                              <span class="text:italic">No reason present</span>
+                              <span class="text:italic">未提供</span>
                             {else}
                               <span>{$ban.ureason}</span>
                             {/if}
                           </li>
                           <li>
-                            <span><i class="fas fa-user-shield"></i> Unblocked by Admin</span>
+                            <span><i class="fas fa-user-shield"></i>管理员解封</span>
 
                             {if empty($ban.removedby)}
-                              <span class="text:italic">Admin deleted</span>
+                              <span class="text:italic">管理员已删除</span>
                             {else}
                               <span>{$ban.removedby|escape:'html'}</span>
                             {/if}
                           </li>
                         {/if}
                         <li>
-                          <span><i class="fas fa-clock"></i> Expires on</span>
+                          <span><i class="fas fa-clock"></i>结束时间</span>
 
                           {if $ban.expires == "never"}
-                            <span class="text:italic">Not applicable</span>
+                            <span class="text:italic">不适用</span>
                           {else}
                             <span>{$ban.expires}</span>
                           {/if}
                         </li>
                         <li>
-                          <span><i class="fas fa-question"></i> Reason</span>
+                          <span><i class="fas fa-question"></i>原因</span>
 						  {if $ban.reason == ""}
-                              <span class="text:italic">No reason present</span>
+                              <span class="text:italic">未提供</span>
                             {else}
                           <span>{$ban.reason}</span>
 						  {/if}
                         </li>
                         {if !$hideadminname}
                           <li>
-                            <span><i class="fas fa-ban"></i> Blocked by Admin</span>
+                            <span><i class="fas fa-ban"></i>被管理员封锁</span>
 
                             {if empty($ban.admin)}
-                              <span class="text:italic">Admin deleted</span>
+                              <span class="text:italic">管理员已删除</span>
                             {else}
                               <span>{$ban.admin|escape:'html'}</span>
                             {/if}
                           </li>
                         {/if}
 						<li>
-                                                        <span><i class="fas fa-server"></i> Blocked from</span>
+                                                        <span><i class="fas fa-server"></i>封禁于</span>
                                                             <span {if $ban.server_id != 0} id="host_{$ban.ban_id}"{/if}>
 											{if $ban.server_id == 0}
-											Web Ban
+											在线封禁
 											{else}
-											Please Wait...
+											请稍候...
 											{/if}</span>
                                                     </li>
                         <li>
-                          <span><i class="fas fa-ban"></i> Total Blocks</span>
+                          <span><i class="fas fa-ban"></i>总计禁言</span>
                           <span>{$ban.prevoff_link}
 						  	{if $view_bans}
                           		{if $ban.counts > 0 || $ban.commentdata != "None"}
-                              		<div>&nbsp;[{$ban.counts} ]</div>
+                              		<div>&nbsp;[{$ban.counts}]</div>
 								{/if}
                       		{/if}
 						</span>
@@ -274,7 +274,7 @@
                       {if $view_comments}
                         <div class="ban_list_comments margin-left responsive_show:desktop">
                           <div class="layout_box_title">
-                            <h2>Comments</h2>
+                            <h2>留言</h2>
                           </div>
                           {if $ban.commentdata != "None"}
                             <ul>
@@ -285,7 +285,7 @@
                                       {if !empty($commenta.comname)}
                                         <span class="text:bold">{$commenta.comname|escape:'html'}</span>
                                       {else}
-                                        <span class="text:italic">Admin deleted</span>
+                                        <span class="text:italic">管理员已删除</span>
                                       {/if}
                                       <span>{$commenta.added}</span>
                                       {if $commenta.editcomlink != ""}
@@ -298,8 +298,8 @@
 
                                       {if !empty($commenta.edittime)}
                                         <span class="margin-top:half text:italic">
-                                          <i class="fas fa-pencil-alt"></i> Last edit
-                                          {$commenta.edittime} by {$commenta.editname}
+                                          <i class="fas fa-pencil-alt"></i>
+                                          {$commenta.edittime}最后编辑于{$commenta.editname}
                                         </span>
                                       {/if}
                                     </div>
@@ -319,7 +319,7 @@
                         {if $ban.commentdata != "None"}
                             <ul class="ban_list_comments responsive_hide:desktop" style="display: contents;">
                                 <div class="layout_box_title">
-                                    <h2><i class="fa-solid fa-comments"></i> Comments <i style="font-weight: normal;font-size: smaller;">(from the most recent to the oldest)</i></h2>
+                                    <h2><i class="fa-solid fa-comments"></i>留言<i style="font-weight: normal;font-size: smaller;">(从最近的到最老的）</i></h2>
                                 </div>
                                 <ul>
                                     {foreach from=$ban.commentdata item="commenta"}
@@ -329,7 +329,7 @@
                                                     {if !empty($commenta.comname)}
                                                         <span class="text:bold">{$commenta.comname|escape:'html'}</span>
                                                     {else}
-                                                        <span class="text:italic">Admin deleted</span>
+                                                        <span class="text:italic">管理员已删除</span>
                                                     {/if}
                                                     <span>{$commenta.added}</span>
                                                     {if $commenta.editcomlink != ""}
@@ -340,8 +340,8 @@
                                                     {$commenta.commenttxt}
                                                     {if !empty($commenta.edittime)}
                                                         <span class="margin-top:half text:italic">
-                                                            <i class="fas fa-pencil-alt"></i> Last edit
-                                                            {$commenta.edittime} by {if !empty($commenta.editname)}{$commenta.editname}{else}<i>Admin deleted</i>{/if}
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                            {$commenta.edittime}最后编辑于{if !empty($commenta.editname)}{$commenta.editname}{else}<i>管理员已删除</i>{/if}
                                                         </span>
                                                     {/if}
                                                 </div>
@@ -363,8 +363,8 @@
   </div>
 
   <div class="layout_box padding:half margin-top text:right">
-    <span class="text:italic">SourceComms plugin &#038; integration to SourceBans made by <a
-        href="https://github.com/ppalex7" class="text:bold" target="_blank" rel="noopener">Alex</a></span>
+    <span class="text:italic">SourceComms 插件 &#038; 由<a
+        href="https://github.com/ppalex7" class="text:bold" target="_blank" rel="noopener">Alex</a> 整合到 SourceBans </span>
   </div>
 
   <script type="text/javascript" src="themes/{$theme}/scripts/collapse.js"></script>

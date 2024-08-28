@@ -1,48 +1,48 @@
 {if NOT $permission_import}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出问题了 (╯□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码：<span class="text:bold">403 禁止</span>
         </div>
     </section>
 {else}
     {if NOT $groupbanning_enabled}
         <section class="error padding">
             <i class="fas fa-exclamation-circle"></i>
-            <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+            <div class="error_title">哎呀，出问题了 (╯□°)╯︵ ┻━┻</div>
 
             <div class="error_content">
-                This feature is disabled!<br />
-                Access Denied!
+                此功能已禁用！<br />
+                拒绝访问！
             </div>
 
             <div class="error_code">
-                Error code: <span class="text:bold">423 Locked</span>
+                错误代码：<span class="text:bold">423 锁定</span>
             </div>
         </section>
     {else}
         <div class="admin_tab_content_title">
-            <h2><i class="fa-solid fa-people-group"></i> Add Group Ban</h2>
+            <h2><i class="fa-solid fa-people-group"></i>添加Steam组封禁</h2>
         </div>
 
         <div class="padding">
             <div class="margin-bottom">
                 {if NOT $list_steam_groups}
                     <div class="margin-bottom">
-                        Here you can add a ban for a whole steam community group.<br />
-                        e.g. <code>http://steamcommunity.com/groups/interwavestudios</code>
+                        在这里，您可以为整个 steam 社区组添加封禁。<br />
+                        例如<code>http://steamcommunity.com/groups/interwavestudios</code>
                     </div>
                     <table width="90%" style="border-collapse:collapse;" id="group.details" cellpadding="3">
                         <tr>
                             <td valign="top" width="35%">
                                 <div class="rowdesc">
-                                    {help_icon title="Group Link" message="Type the link to a steam community group."}Group Link
+                                    {help_icon title="Group Link" message="Type the link to a steam community group."}群组链接
                                 </div>
                             </td>
                             <td>
@@ -55,8 +55,8 @@
                         <tr>
                             <td valign="top" width="35%">
                                 <div class="rowdesc">
-                                    {help_icon title="Group Ban Reason" message="Type the reason, why you are going to ban this steam community group."}Group
-                                    Ban Reason
+                                    {help_icon title="Group Ban Reason" message="Type the reason, why you are going to ban this steam community group."}组
+                                    禁止原因
                                 </div>
                             </td>
                             <td>
@@ -77,9 +77,9 @@
                         </tr>
                     </table>
                     {else}
-                        All groups the player {$player_name} is member of are listed here.<br />
-                        Choose the steam groups you want to ban.<br /><br />
-                        <div id="steamGroupsText" name="steamGroupsText">Loading the groups...</div>
+                        玩家 {$player_name} 所有加入的组已列出。<br />
+                        选择要封禁的Steam组。<br /><br />
+                        <div id="steamGroupsText" name="steamGroupsText">加载组...</div>
                         <div id="steamGroups" name="steamGroups" style="display:none;">
                             <table id="steamGroupsTable" name="steamGroupsTable" border="0" width="500px">
                                 <tr>
@@ -87,17 +87,17 @@
                                         <div class="ok" style="height:16px;width:16px;cursor:pointer;" id="tickswitch" name="tickswitch"
                                             onclick="TickSelectAll();"></div>
                                     </td>
-                                    <td height="16" class="listtable_top" align="center"><b>Group</b></td>
+                                    <td height="16" class="listtable_top" align="center"><b>组别</b></td>
                                 </tr>
                             </table>
                             &nbsp;&nbsp;L&nbsp;&nbsp;<a href="#" onclick="TickSelectAll();return false;" title="Select All"
-                                name="tickswitchlink" id="tickswitchlink">Select All</a><br /><br />
+                                name="tickswitchlink" id="tickswitchlink">全部选择</a><br /><br />
                             <table width="90%" style="border-collapse:collapse;" id="group.details" cellpadding="3">
                                 <tr>
                                     <td valign="top" width="35%">
                                         <div class="rowdesc">
-                                            {help_icon title="Group Ban Reason" message="Type the reason, why you are going to ban this steam community group."}Group
-                                            Ban Reason
+                                            {help_icon title="Group Ban Reason" message="Type the reason, why you are going to ban this steam community group."}组
+                                            禁止原因
                                         </div>
                                     </td>
                                     <td>

@@ -1,11 +1,11 @@
-<h2 class="title text-center">Select an option to administer</h2>
+<h2 class="title text-center">选择要管理的选项</h2>
 <div class="admin_nav">
     <ul class="flex">
 		{if $access_admins}
 			 <li>
 					<a href="index.php?p=admin&amp;c=admins">
 					  <i class="fas fa-user"></i>
-					  <span>Admin</span>
+					  <span>管理员</span>
 				  </a>
 			 </li>
     	{/if}
@@ -13,7 +13,7 @@
             <li>
                 <a href="index.php?p=admin&amp;c=bans">
                     <i class="fas fa-ban"></i>
-                    <span>Bans</span>
+                    <span>封禁</span>
                 </a>
             </li>
         {/if}
@@ -21,7 +21,7 @@
             <li>
                 <a href="index.php?p=admin&amp;c=comms">
                     <i class="fas fa-microphone-alt-slash"></i>
-                    <span>Comms</span>
+                    <span>通讯</span>
                 </a>
             </li>
         {/if}
@@ -29,7 +29,7 @@
             <li>
                 <a href="index.php?p=admin&amp;c=groups">
                     <i class="fas fa-users"></i>
-                    <span>Group</span>
+                    <span>组</span>
                 </a>
             </li>
         {/if}
@@ -37,7 +37,7 @@
             <li>
                 <a href="index.php?p=admin&amp;c=servers">
                     <i class="fas fa-server"></i>
-                    <span>Server</span>
+                    <span>服务器</span>
                 </a>
             </li>
         {/if}
@@ -45,7 +45,7 @@
             <li>
                 <a href="index.php?p=admin&amp;c=settings">
                     <i class="fas fa-tools"></i>
-                    <span>Webpanel</span>
+                    <span>面板</span>
                 </a>
             </li>
         {/if}
@@ -53,7 +53,7 @@
             <li>
                 <a href="index.php?p=admin&amp;c=mods">
                     <i class="fas fa-cubes"></i>
-                    <span>Manage Mods</span>
+                    <span>管理Mod</span>
                 </a>
             </li>
         {/if}
@@ -63,14 +63,14 @@
 <div class="admin_dashboard margin-top">
 <div class="layout_box">
         <div class="layout_box_title">
-            <h2 align="center"><i class="fas fa-ban"></i> Bans - Comms</h2>
+            <h2 align="center"><i class="fas fa-ban"></i>封禁 - 通信</h2>
         </div>
         <div class="padding">
             <ul class="list-reset">
                 <!-- WARNING: To fully fix this part use https://github.com/Rushaway/sourcebans-pp/commit/f05a4bcdfa59002970daeb0b8231ffc1b13c834c -->
-                <li>Total bans : <span class="text:bold">{$total_bans}</span></li>
-                <li>Total comms : <span class="text:bold">{$total_comms}</span></li>
-                <li>Connections blocked : <span class="text:bold">{$total_blocks}</span></li>
+                <li>总计封禁 ：<span class="text:bold">{$total_bans}</span></li>
+                <li>总计禁言 ：<span class="text:bold">{$total_comms}</span></li>
+                <li>总计阻止连接 ：<span class="text:bold">{$total_blocks}</span></li>
             </ul>
         </div>
     </div>
@@ -78,64 +78,64 @@
 
     <div class="layout_box">
         <div class="layout_box_title">
-            <h2 align="center"><i class="fas fa-user-shield fa-1x"></i> Admin Information</h2>
+            <h2 align="center"><i class="fas fa-user-shield fa-1x"></i>管理信息</h2>
         </div>
         <div class="padding">
 		<ul class="list-reset" align="center">
-					<li>We have a total of <span class="text:bold" style="font-size:xx-large"> <i style="color:#dd6b20">{$total_admins}</i></span> Admins throught all servers!</li>
-					&nbsp;
-					<li><i class="fas fa-rocket fa-1x"></i> Teamwork makes the <span class="text-primary">dream work</span>!</li>
+					<li>我们共有<span class="text:bold" style="font-size:xx-large"> <i style="color:#dd6b20">{$total_admins}</i></span>所有服务器的管理员！</li>
+&nbsp;
+<li><i class="fas fa-rocket fa-1x"></i>Ciallo~<span class="text-primary">～(∠・ω< )⌒★</span>!</li>
 					</ul>
 				</div>
     </div>
 	
 	<div class="layout_box">
         <div class="layout_box_title">
-            <h2 align="center"><i class="fas fa-exclamation-circle"></i> Submission Stats</h2>
+            <h2 align="center"><i class="fas fa-exclamation-circle"></i>举报统计</h2>
         </div>
         <div class="padding">
             <ul class="list-reset" align="right">
-                <li>Pending : <span class="text:bold">{$total_submissions}</span></li>
-                <li>Archived : <span class="text:bold">{$archived_submissions}</span></li>
+                <li>待定 ：<span class="text:bold">{$total_submissions}</span></li>
+                <li>存档 ：<span class="text:bold">{$archived_submissions}</span></li>
             </ul>
         </div>
     </div>
 	
     <div class="layout_box">
         <div class="layout_box_title">
-            <h2 align="center"><i class="fas fa-angry"></i> Protest Stats</h2>
+            <h2 align="center"><i class="fas fa-angry"></i>申诉统计</h2>
         </div>
         <div class="padding">
             <ul class="list-reset">
-                <li>Pending : <span class="text:bold">{$total_protests}</span></li>
-                <li>Archived : <span class="text:bold">{$archived_protests}</span></li>
+                <li>待定 ：<span class="text:bold">{$total_protests}</span></li>
+                <li>存档 ：<span class="text:bold">{$archived_protests}</span></li>
             </ul>
         </div>
     </div>
 	
 	<div class="layout_box">
         <div class="layout_box_title">
-            <h2 align="center"><i class="fas fa-server"></i> Server Information</h2>
+            <h2 align="center"><i class="fas fa-server"></i>服务器信息</h2>
         </div>
         <div class="padding" align="center">
             <ul class="list-reset">
-				<li>We have a total of <span class="text:bold" style="font-size:x-large"> <i style="color:#dd6b20">{$total_servers}</i></span> servers registred on SourceBans.</li>
-				<li>Total demo size is<span class="text:bold" style="font-size:x-large"> <i style="color:#dd6b20">{$demosize}</i></span> hosted on our WebServer.</li>
+				<li>我们共有<span class="text:bold" style="font-size:x-large"> <i style="color:#dd6b20">{$total_servers}</i></span>在 SourceBans 上注册的服务器。</li>
+				<li>Demo 总大小为<span class="text:bold" style="font-size:x-large"> <i style="color:#dd6b20">{$demosize}</i></span>保存在我们的服务器上。</li>
             </ul>
         </div>
     </div>
 
     <div class="layout_box">
         <div class="layout_box_title">
-            <h2 align="center"><i class="fas fa-code-branch"></i> Version Information</h2>
+            <h2 align="center"><i class="fas fa-code-branch"></i>版本信息</h2>
         </div>
         <div class="padding" align="right">
             <ul class="list-reset">
-                <li>Latest release: <span id='relver' class="text:bold">Please Wait...</span></li>
+                <li>最新发布：<span id='relver' class="text:bold">请稍候...</span></li>
                 {if $dev}
-                    <li>Latest Git: <span id='svnrev' class="text:bold">Please Wait...</span></li>
+                    <li>最新的 Git：<span id='svnrev' class="text:bold">请稍候...</span></li>
                 {/if}
-                <li><span id='versionmsg'>Please Wait...</span></li>
+                <li><span id='versionmsg'>请稍候...</span></li>
             </ul>
         </div>
     </div>

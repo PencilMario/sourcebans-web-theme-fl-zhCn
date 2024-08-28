@@ -1,5 +1,5 @@
 <div class="admin_tab_content_title">
-    <h2><i class="fas fa-user-shield"></i> Admins on this server ({$admin_count})</h2>
+    <h2><i class="fas fa-user-shield"></i>该服务器的管理员 ({$admin_count})</h2>
 </div>
 
 <div class="padding">
@@ -7,8 +7,8 @@
         <table>
             <thead>
                 <tr>
-                    <th class="text:left">Admin Name</th>
-                    <th class="text:left">Admin SteamID</th>
+                    <th class="text:left">管理员姓名</th>
+                    <th class="text:left">管理员Steam ID</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,12 +26,12 @@
                         <tr class="table_hide">
                             <td colspan="8">
                                 <div class="collapse_content">
-                                    <h3>Admin Details Ingame</h3>
+                                    <h3>游戏中的管理员详细信息</h3>
                                     <div class="table table_box">
                                         <table>
                                             <thead>
                                                 <tr>
-                                                    <th class="text:left">Name</th>
+                                                    <th class="text:left">名称</th>
                                                     <th class="text:left">Steam ID</th>
                                                     <th class="text:left">IP</th>
                                                 </tr>

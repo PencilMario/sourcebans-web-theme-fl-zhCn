@@ -5,7 +5,7 @@
                 <tbody>
                     <tr class="collapse">
                         <td class="text:center">
-                            <span class="text:bold">Advanced Search</span> (Click)
+                            <span class="text:bold">高级搜索</span>(点击)
                         </td>
                     </tr>
 
@@ -20,7 +20,7 @@
                                                     value="name" />
 
                                                 <label for="name" class="form-label form-label:bottom">
-                                                    Nickname
+                                                    昵称
                                                 </label>
 
                                                 <input class="form-input form-full" type="text" id="nick" value=""
@@ -42,8 +42,8 @@
 
                                                     <select class="form-select form-full" id="steam_match"
                                                         onmouseup="$('steam_').checked = true">
-                                                        <option value="0" selected>Exact Match</option>
-                                                        <option value="1">Partial Match</option>
+                                                        <option value="0" selected>完全匹配</option>
+                                                        <option value="1">部分匹配</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -53,7 +53,7 @@
                                                     value="radiobutton" />
 
                                                 <label for="ban_reason" class="form-label form-label:bottom">
-                                                    Reason
+                                                    原因
                                                 </label>
 
                                                 <input class="form-input form-full" type="text" id="ban_reason" value=""
@@ -65,7 +65,7 @@
                                                     value="radiobutton" />
 
                                                 <label for="date" class="form-label form-label:bottom form-label:right">
-                                                    Date
+                                                    日期
                                                 </label>
 
                                                 <div class="flex">
@@ -88,13 +88,13 @@
 
                                                 <label for="ban_type"
                                                     class="form-label form-label:bottom form-label:right">
-                                                    Type
+                                                    类型
                                                 </label>
 
                                                 <select class="form-select form-full" id="ban_type"
                                                     onmouseup="$('ban_type_').checked = true">
-                                                    <option value="1" selected>Mute</option>
-                                                    <option value="2">Gag</option>
+                                                    <option value="1" selected>静音</option>
+                                                    <option value="2">脏话</option>
                                                 </select>
                                             </div>
 
@@ -105,7 +105,7 @@
 
                                                     <label for="ban_admin"
                                                         class="form-label form-label:bottom form-label:right">
-                                                        Admin
+                                                        管理员
                                                     </label>
 
                                                     <select class="form-select form-full" id="ban_admin"
@@ -124,15 +124,15 @@
 
                                                 <label for="server"
                                                     class="form-label form-label:bottom form-label:right">
-                                                    Server
+                                                    服务器
                                                 </label>
 
                                                 <select class="form-select form-full" id="server"
                                                     onmouseup="$('where_banned').checked = true">
-                                                    <option label="Web Ban" value="0">Web Ban</option>
+                                                    <option label="Web Ban" value="0">在线封禁</option>
                                                     {foreach from=$server_list item="server"}
-                                                        <option value="{$server.sid}" id="ss{$server.sid}">Retrieving
-                                                            Hostname...
+                                                        <option value="{$server.sid}" id="ss{$server.sid}">检索
+                                                            主机名...
                                                             ({$server.ip}:{$server.port})</option>
                                                     {/foreach}
                                                 </select>
@@ -145,7 +145,7 @@
 
                                                     <label for="ban_comment"
                                                         class="form-label form-label:bottom form-label:right">
-                                                        Comment
+                                                        留言
                                                     </label>
 
                                                     <input class="form-input form-full" type="text" id="ban_comment"
@@ -160,7 +160,7 @@
                                             value="radiobutton" />
 
                                         <label for="other_length" class="form-label form-label:bottom form-label:right">
-                                            Length
+                                            长度
                                         </label>
 
                                         <div class="flex">
@@ -177,44 +177,44 @@
                                                 onmouseup="$('length_').checked = true" onchange="switch_length(this);"
                                                 onmouseover="if(this.options[this.selectedIndex].value=='other')$('length').setStyle('width', '210px');if(this.options[this.selectedIndex].value=='other')this.focus();"
                                                 onblur="if(this.options[this.selectedIndex].value=='other')$('length').setStyle('width', '20px');">
-                                                <option value="0">Permanent</option>
+                                                <option value="0">永久</option>
                                                 <optgroup label="minutes">
-                                                    <option value="1">1 minute</option>
-                                                    <option value="5">5 minutes</option>
-                                                    <option value="10">10 minutes</option>
-                                                    <option value="15">15 minutes</option>
-                                                    <option value="30">30 minutes</option>
-                                                    <option value="45">45 minutes</option>
+                                                    <option value="1">1 分钟</option>
+                                                    <option value="5">5 分钟</option>
+                                                    <option value="10">10 分钟</option>
+                                                    <option value="15">15 分钟</option>
+                                                    <option value="30">30 分钟</option>
+                                                    <option value="45">45 分钟</option>
                                                 </optgroup>
                                                 <optgroup label="hours">
-                                                    <option value="60">1 hour</option>
-                                                    <option value="120">2 hours</option>
-                                                    <option value="180">3 hours</option>
-                                                    <option value="240">4 hours</option>
-                                                    <option value="480">8 hours</option>
-                                                    <option value="720">12 hours</option>
+                                                    <option value="60">1 小时</option>
+                                                    <option value="120">2 小时</option>
+                                                    <option value="180">3 小时</option>
+                                                    <option value="240">4 小时</option>
+                                                    <option value="480">8 小时</option>
+                                                    <option value="720">12 小时</option>
                                                 </optgroup>
                                                 <optgroup label="days">
-                                                    <option value="1440">1 day</option>
-                                                    <option value="2880">2 days</option>
-                                                    <option value="4320">3 days</option>
-                                                    <option value="5760">4 days</option>
-                                                    <option value="7200">5 days</option>
-                                                    <option value="8640">6 days</option>
+                                                    <option value="1440">1 天</option>
+                                                    <option value="2880">2 天</option>
+                                                    <option value="4320">3 天</option>
+                                                    <option value="5760">4 天</option>
+                                                    <option value="7200">5 天</option>
+                                                    <option value="8640">6 天</option>
                                                 </optgroup>
                                                 <optgroup label="weeks">
-                                                    <option value="10080">1 week</option>
-                                                    <option value="20160">2 weeks</option>
-                                                    <option value="30240">3 weeks</option>
+                                                    <option value="10080">1 周</option>
+                                                    <option value="20160">2 周</option>
+                                                    <option value="30240">3周</option>
                                                 </optgroup>
                                                 <optgroup label="months">
-                                                    <option value="40320">1 month</option>
-                                                    <option value="80640">2 months</option>
-                                                    <option value="120960">3 months</option>
-                                                    <option value="241920">6 months</option>
-                                                    <option value="483840">12 months</option>
+                                                    <option value="40320">1 个月</option>
+                                                    <option value="80640">2 个月</option>
+                                                    <option value="120960">3 个月</option>
+                                                    <option value="241920">6 个月</option>
+                                                    <option value="483840">12 个月</option>
                                                 </optgroup>
-                                                <option value="other">Other length in minutes</option>
+                                                <option value="other">其他长度（分钟）</option>
                                             </select>
 
                                             <input type="text" id="other_length" name="other_length"

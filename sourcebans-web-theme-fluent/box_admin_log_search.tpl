@@ -4,7 +4,7 @@
 <div align="center">
     <table width="80%" cellpadding="0" class="listtable" cellspacing="0">
         <tr class="sea_open">
-            <td width="2%" height="16" class="listtable_top" colspan="3" style="text-align: center;"><b>Advanced Search<b> (Click)</td>
+            <td width="2%" height="16" class="listtable_top" colspan="3" style="text-align: center;"><b>高级搜索<b>(点击)</td>
         </tr>
         <tr>
             <td>
@@ -12,7 +12,7 @@
                     <table width="100%" cellpadding="0" class="listtable" cellspacing="0">
                         <tr>
                             <td class="listtable_1" width="8%" align="center"><input id="admin_" name="search_type" type="radio" value="radiobutton"></td>
-                            <td class="listtable_1" width="26%">Admin</td>
+                            <td class="listtable_1" width="26%">管理员</td>
                             <td class="listtable_1" width="66%">
                                 <select class="select" id="admin" onmouseup="$('admin_').checked = true" style="width: 100%;">
                                     {foreach from=$admin_list item="admin"}
@@ -23,30 +23,30 @@
                         </tr>
                         <tr>
                             <td class="listtable_1" align="center"><input id="message_" name="search_type" type="radio" value="radiobutton"></td>
-                            <td class="listtable_1">Message</td>
+                            <td class="listtable_1">留言</td>
                             <td class="listtable_1"><input class="textbox" type="text" id="message" value="" onmouseup="$('message_').checked = true" style="width:  93%;"></td>
                         </tr>
                         <tr>
                             <td align="center" class="listtable_1" ><input id="date_" type="radio" name="search_type" value="radiobutton"></td>
-                            <td class="listtable_1" >Date</td>
+                            <td class="listtable_1" >日期</td>
                             <td class="listtable_1" >
-                                <input class="textbox" type="text" id="day" value="DD" onmouseup="$('date_').checked = true" maxlength="2" style="width: 46px;"> .
-                                <input class="textbox" type="text" id="month" value="MM" onmouseup="$('date_').checked = true" maxlength="2" style="width: 46px;"> .
+                                <input class="textbox" type="text" id="day" value="DD" onmouseup="$('date_').checked = true" maxlength="2" style="width: 46px;">.
+                                <input class="textbox" type="text" id="month" value="MM" onmouseup="$('date_').checked = true" maxlength="2" style="width: 46px;">.
                                 <input class="textbox" type="text" id="year" value="YYYY" onmouseup="$('date_').checked = true" maxlength="4" style="width: 60px;">
-                                &nbsp;<input class="textbox" type="text" id="fhour" value="00" onmouseup="$('date_').checked = true" maxlength="2" style="width: 44px;"> :
+                                &nbsp;<input class="textbox" type="text" id="fhour" value="00" onmouseup="$('date_').checked = true" maxlength="2" style="width: 44px;">:
                                 <input class="textbox" type="text" id="fminute" value="00" onmouseup="$('date_').checked = true" maxlength="2" style="width: 44px;">
-                                -&nbsp;<input class="textbox" type="text" id="thour" value="23" onmouseup="$('date_').checked = true" maxlength="2" style="width: 44px;"> :
+                                -&nbsp;<input class="textbox" type="text" id="thour" value="23" onmouseup="$('date_').checked = true" maxlength="2" style="width: 44px;">:
                                 <input class="textbox" type="text" id="tminute" value="59" onmouseup="$('date_').checked = true" maxlength="2" style="width: 44px;">
                             </td>
                         </tr>
                         <tr>
                             <td align="center" class="listtable_1" ><input id="type_" type="radio" name="search_type" value="radiobutton"></td>
-                            <td class="listtable_1" >Type</td>
+                            <td class="listtable_1" >类型</td>
                             <td class="listtable_1" >
                                 <select class="select" id="type" onmouseup="$('type_').checked = true" style="width: 100%;">
-                                    <option label="Message" value="m">Message</option>
-                                    <option label="Warning" value="w">Warning</option>
-                                    <option label="Error" value="e">Error</option>
+                                    <option label="Message" value="m">留言</option>
+                                    <option label="Warning" value="w">警告</option>
+                                    <option label="Error" value="e">错误</option>
                                 </select>
                             </td>
                         </tr>

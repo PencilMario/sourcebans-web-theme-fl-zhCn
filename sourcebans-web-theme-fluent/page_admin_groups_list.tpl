@@ -1,35 +1,35 @@
 {if NOT $permission_listgroups}
     <section class="error padding">
         <i class="fas fa-exclamation-circle"></i>
-        <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+        <div class="error_title">哎呀，出问题了 (╯□°)╯︵ ┻━┻</div>
 
         <div class="error_content">
-            Access Denied!
+            拒绝访问！
         </div>
 
         <div class="error_code">
-            Error code: <span class="text:bold">403 Forbidden</span>
+            错误代码：<span class="text:bold">403 禁止</span>
         </div>
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-users"></i> Groups</h2>
+        <h2><i class="fas fa-users"></i>组别</h2>
     </div>
 
     <div class="padding">
         <div>
-            Click on a group to view its permissions.
+            单击组查看其权限。
         </div>
 
-        <h3 style="color: var(--table-permanent-text);">Web Admin Groups ({$web_group_count})</h3>
+        <h3 style="color: var(--table-permanent-text);">网络管理员组 ({$web_group_count})</h3>
 
         <div class="table table_box">
             <table>
                 <thead>
                     <tr>
-                        <th class="text:left">Group Name</th>
-                        <th class="text:left">Admins in group</th>
-                        <th>Action</th>
+                        <th class="text:left">组名</th>
+                        <th class="text:left">组内管理员</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,14 +47,14 @@
                                 {if $permission_editgroup}
                                     <a class="button button-light margin-right:half"
                                         href="index.php?p=admin&c=groups&o=edit&type=web&id={$group.gid}">
-                                        Edit
+                                        编辑
                                     </a>
                                 {/if}
 
                                 {if $permission_deletegroup}
                                     <button class="button button-important"
                                         onclick="RemoveGroup({$group.gid}, '{$group.name}', 'web');">
-                                        Delete
+                                        删除
                                     </button>
                                 {/if}
                             </td>
@@ -63,7 +63,7 @@
                                 <div class="collapse_content">
                                     <div class="padding:half flex m:flex-fd:column">
                                         <div class="flex:11">
-                                            <h4>Permissions</h4>
+                                            <h4>权限</h4>
 
                                             <ul>
                                                 {if $group.permissions}
@@ -71,13 +71,13 @@
                                                         <li>{$permission}</li>
                                                     {/foreach}
                                                 {else}
-                                                    <li class="text:italic">None</li>
+                                                    <li class="text:italic">无</li>
                                                 {/if}
                                             </ul>
                                         </div>
 
                                         <div class="flex:11">
-                                            <h4>Members</h4>
+                                            <h4>成员</h4>
 
                                             <div class="table table_box">
                                                 <table>
@@ -92,13 +92,13 @@
                                                                         <a class="button button-light margin-right:half"
                                                                             href="index.php?p=admin&c=admins&o=editgroup&id={$web_admin.aid}"
                                                                             title="Edit Groups">
-                                                                            Edit
+                                                                            编辑
                                                                         </a>
 
                                                                         <a class="button button-infos"
                                                                             href="index.php?p=admin&c=admins&o=editgroup&id={$web_admin.aid}&wg="
                                                                             title="Remove From Group">
-                                                                            Remove
+                                                                            移除
                                                                         </a>
                                                                     </td>
                                                                 {/if}
@@ -117,15 +117,15 @@
                 </tbody>
             </table>
         </div>
-        	<h3 style="color: var(--table-unbanned-text);">Server Admin Groups ({$server_admin_group_count})</h3>
+        	<h3 style="color: var(--table-unbanned-text);">服务器管理组 ({$server_admin_group_count})</h3>
 
         <div class="table table_box">
             <table>
                 <thead>
                     <tr>
-                        <th class="text:left">Group Name</th>
-                        <th class="text:left">Admins in group</th>
-                        <th>Action</th>
+                        <th class="text:left">组名</th>
+                        <th class="text:left">组内管理员</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -143,13 +143,13 @@
                                 {if $permission_editgroup}
                                     <a class="button button-light margin-right:half"
                                         href="index.php?p=admin&c=groups&o=edit&type=srv&id={$group.id}">
-                                        Edit
+                                        编辑
                                     </a>
                                 {/if}
 
                                 {if $permission_deletegroup}
                                     <button class="button button-important" onclick="RemoveGroup({$group.id}, '{$group.name}', 'srv');">
-                                        Delete
+                                        删除
                                     </button>
                                 {/if}
                             </td>
@@ -158,7 +158,7 @@
                                 <div class="collapse_content">
                                     <div class="padding:half flex m:flex-fd:column">
                                         <div class="flex:11">
-                                            <h4>Permissions</h4>
+                                            <h4>权限</h4>
 
                                             <ul>
                                                 {if $group.permissions}
@@ -166,13 +166,13 @@
                                                         <li>{$permission}</li>
                                                     {/foreach}
                                                 {else}
-                                                    <li class="text:italic">None</li>
+                                                    <li class="text:italic">无</li>
                                                 {/if}
                                             </ul>
                                         </div>
 
                                         <div class="flex:11">
-                                            <h4>Members</h4>
+                                            <h4>成员</h4>
 
                                             <div class="table table_box">
                                                 <table>
@@ -187,13 +187,13 @@
                                                                         <a class="button button-light margin-right:half"
                                                                             href="index.php?p=admin&c=admins&o=editgroup&id={$server_admin.aid}"
                                                                             title="Edit Groups">
-                                                                            Edit
+                                                                            编辑
                                                                         </a>
 
                                                                         <a class="button button-important"
                                                                             href="index.php?p=admin&c=admins&o=editgroup&id={$server_admin.aid}&sg="
                                                                             title="Remove From Group">
-                                                                            Remove
+                                                                            移除
                                                                         </a>
                                                                     </td>
                                                                 {/if}
@@ -210,9 +210,9 @@
                                             <table>
                                                 <thead>
                                                     <tr>
-                                                        <th class="text:left">Type</th>
-                                                        <th class="text:left">Name</th>
-                                                        <th class="text:left">Access</th>
+                                                        <th class="text:left">类型</th>
+                                                        <th class="text:left">名称</th>
+                                                        <th class="text:left">权限</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -235,15 +235,15 @@
             </table>
         </div>
 
-        <h3>Server Groups ({$server_group_count})</h3>
+        <h3>服务器组 ({$server_group_count})</h3>
 
         <div class="table table_box">
             <table>
                 <thead>
                     <tr>
-                        <th class="text:left">Group Name</th>
-                        <th class="text:left">Admins in group</th>
-                        <th>Action</th>
+                        <th class="text:left">组名</th>
+                        <th class="text:left">组内管理员</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -261,14 +261,14 @@
                                 {if $permission_editgroup}
                                     <a class="button button-light margin-right:half"
                                         href="index.php?p=admin&c=groups&o=edit&type=server&id={$group.gid}">
-                                        Edit
+                                        编辑
                                     </a>
                                 {/if}
 
                                 {if $permission_deletegroup}
                                     <button class="button button-important"
                                         onclick="RemoveGroup({$group.gid}, '{$group.name}', 'server');">
-                                        Delete
+                                        删除
                                     </button>
                                 {/if}
                             </td>
@@ -276,10 +276,10 @@
                             <td colspan="8">
                                 <div class="collapse_content">
                                     <div class="padding">
-                                        <h3>Servers in this group</h3>
+                                        <h3>该组中的服务器</h3>
 
                                         <ul>
-                                            <li id="servers_{$group.gid}">Please Wait!</li>
+                                            <li id="servers_{$group.gid}">请稍候！</li>
                                         </ul>
                                     </div>
                                 </div>

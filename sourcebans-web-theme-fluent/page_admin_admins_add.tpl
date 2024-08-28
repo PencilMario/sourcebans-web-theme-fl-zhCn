@@ -2,38 +2,37 @@
   {if NOT $permission_addadmin}
     <section class="error padding">
       <i class="fas fa-exclamation-circle"></i>
-      <div class="error_title">Oops, there's a problem (╯°□°）╯︵ ┻━┻</div>
+      <div class="error_title">哎呀，出问题了 (╯□°)╯︵ ┻━┻</div>
 
     <div class="error_content">
-      Access Denied!
+      拒绝访问！
     </div>
 
     <div class="error_code">
-      Error code: <span class="text:bold">403 Forbidden</span>
+      错误代码：<span class="text:bold">403 禁止</span>
     </div>
   </section>
   {else}
   <div class="admin_tab_content_title">
-    <h2><i class="fas fa-user-plus"></i> Add new admin</h2>
+    <h2><i class="fas fa-user-plus"></i>添加新管理员</h2>
   </div>
 
   <div class="padding">
     <div id="msg-green" class="message message:succes margin-bottom:half" style="display: none;">
-      <h3>Admin Added</h3>
-      <div>The new admin has been successfully added to the system.</div>
-      <div class="text:italic">Redirecting back to admins page</div>
+      <h3>添加管理员</h3>
+      <div>新管理员已成功添加到系统中。</div>
+      <div class="text:italic">重定向回管理员页面</div>
     </div>
 
     <div id="add-group">
       <div class="margin-bottom:half">
-        For more information or help regarding a certain subject move your mouse over the
-        question mark.
+        如需有关某一主题的更多信息或帮助，请将鼠标移至问号上。
       </div>
 
       <form class="form">
         <div class="margin-bottom:half">
           <label for="adminname" class="form-label form-label:bottom">
-            Admin Login
+            管理员登录
           </label>
           <input type="text" TABINDEX=1 class="form-input form-full" id="adminname" name="adminname" />
           <div id="name.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -41,7 +40,7 @@
 
         <div class="margin-bottom:half">
           <label for="steam" class="form-label form-label:bottom">
-            Admin Steam ID
+            管理员 Steam ID
           </label>
           <input type="text" TABINDEX=2 value="STEAM_0:" class="form-input form-full" id="steam" name="steam" />
           <div id="steam.msg" class="message message:error margin-top:half" style="display: none;"></div>
@@ -49,7 +48,7 @@
 
         <div class="margin-bottom:half">
           <label for="email" class="form-label form-label:bottom">
-            Admin Email
+            管理员电子
           </label>
 
           <input type="text" TABINDEX=3 class="form-input form-full" id="email" name="email" />
@@ -58,18 +57,18 @@
 
         <div class="margin-bottom:half">
           <label for="password" class="form-label form-label:bottom">
-            Admin Password
+            管理员密码
           </label>
 
           <input type="password" TABINDEX=4 class="form-input form-full" id="password" name="password" />
 
           <div class="flex margin-top:half">
             <button id="password_generate" class="button button-light button:line flex:11 margin-right:half">
-              <i class="fas fa-sync"></i> Generate random password
+              <i class="fas fa-sync"></i>生成随机密码
             </button>
 
             <button id="password_show" class="button button-light button:line flex:11">
-              <i class="fas fa-eye"></i> Show password
+              <i class="fas fa-eye"></i>显示密码
             </button>
           </div>
 
@@ -93,7 +92,7 @@
 
         <div class="margin-bottom:half">
           <label for="password2" class="form-label form-label:bottom">
-            Admin Password (confirm)
+            确认密码
           </label>
 
           <input type="password" TABINDEX=5 class="form-input form-full" id="password2" name="password2" />
@@ -103,7 +102,7 @@
 
         <div class="margin-bottom:half">
           <label for="a_serverpass" class="form-label form-label:bottom">
-            Server Password
+            服务器密码
           </label>
 
           <input type="checkbox" id="a_useserverpass" class="form-check" name="a_useserverpass" TABINDEX=6
@@ -112,10 +111,9 @@
           <input type="password" TABINDEX=7 class="form-input form-full" name="a_serverpass" id="a_serverpass"
             disabled="disabled" />
           <div class="form-desc">
-            If this box is checked, you will need to specify this password in the game server before you
-            can use your admin rights.
+            如果选中此复选框，则需要在游戏服务器中指定此密码，然后才能使用管理员权限。
             <a href="http://wiki.alliedmods.net/Adding_Admins_%28SourceMod%29#Passwords" rel="noopener" target="_blank"
-              class="text:bold">SourceMod Password Info</a>
+              class="text:bold">SourceMod 密码说明</a>
           </div>
 
           <div id="a_serverpass.msg" class="message message:error margin-top:half" style="display: none;">
@@ -123,20 +121,20 @@
         </div>
 
         <div class="margin-bottom:half">
-          <h4 class="form-label">Group Server Access</h4>
+          <h4 class="form-label">组服务器访问</h4>
 
           <ul class="list-reset">
             {foreach from=$group_list item="group"}
             <li class="margin-bottom:half">
               <input type="checkbox" id="group[{$group.gid}]" class="form-check" name="group[]" value="g{$group.gid}" />
               <label for="group[{$group.gid}]" class="form-label form-label:left">
-                {$group.name} <span class="text:bold text:italic">(Group)</span>
+                {$group.name} <span class="text:bold text:italic">(组)</span>
               </label>
             </li>
             {/foreach}
           </ul>
 
-          <h4 class="form-label">Server Access</h4>
+          <h4 class="form-label">服务器权限</h4>
 
           <ul class="list-reset">
             {foreach from=$server_list item="server"}
@@ -144,7 +142,7 @@
               <input type="checkbox" name="servers[]" id="servers[{$server.sid}]" class="form-check"
                 value="s{$server.sid}" />
               <label for="servers[{$server.sid}]" id="sa{$server.sid}" class="form-label form-label:left">
-                Retrieving Hostname... {$server.ip}:{$server.port}
+                检索主机名...{$server.ip}:{$server.port}
               </label>
             </li>
             {/foreach}
@@ -153,14 +151,14 @@
 
         <div class="margin-bottom:half">
           <label for="serverg" class="form-label form-label:bottom">
-            Server Admin Group
+            服务器管理组
           </label>
 
           <select TABINDEX=8 onchange="update_server()" name="serverg" id="serverg" class="form-select form-full">
-            <option value="-2">Please Select...</option>
-            <option value="-3">No Permissions</option>
-            <option value="c">Custom Permissions</option>
-            <option value="n">New Admin Group</option>
+            <option value="-2">请选择...</option>
+            <option value="-3">无权限</option>
+            <option value="c">自定义权限</option>
+            <option value="n">新管理组</option>
             <optgroup label="Groups" style="font-weight:bold;">
               {foreach from=$server_admin_group_list item="server_wg"}
               <option value='{$server_wg.id}'>{$server_wg.name}</option>
@@ -172,14 +170,14 @@
 
         <div class="margin-bottom:half">
           <label for="webg" class="form-label form-label:bottom">
-            Web Admin Group
+            在线管理组
           </label>
 
           <select TABINDEX=9 onchange="update_web()" name="webg" id="webg" class="form-select form-full">
-            <option value="-2">Please Select...</option>
-            <option value="-3">No Permissions</option>
-            <option value="c">Custom Permissions</option>
-            <option value="n">New Admin Group</option>
+            <option value="-2">请选择...</option>
+            <option value="-3">无权限</option>
+            <option value="c">自定义权限</option>
+            <option value="n">新管理组</option>
             <optgroup label="Groups" style="font-weight:bold;">
               {foreach from=$server_group_list item="server_g"}
               <option value='{$server_g.gid}'>{$server_g.name}</option>
