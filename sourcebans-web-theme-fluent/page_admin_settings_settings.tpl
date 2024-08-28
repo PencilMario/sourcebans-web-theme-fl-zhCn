@@ -52,7 +52,7 @@
 
         <div class="margin-bottom:half">
             <label for="config_dateformat" class="form-label form-label:bottom">
-                日期格式<a href="http://www.php.net/date" target="_blank" rel="noopener">参见：PHP date()</a>
+                日期格式 <a href="http://www.php.net/date" target="_blank" rel="noopener">参见：PHP date()</a>
             </label>
 
             <input type="text" TABINDEX=4 class="form-input form-full" id="config_dateformat" name="config_dateformat"
@@ -91,7 +91,7 @@
 
         <div class="margin-bottom:half">
             <label for="auth_maxlife_steam" class="form-label form-label:bottom">
-                授权令牌（Steam登录）<span class="text:italic">（分钟）</span>
+                登录过期时间（Steam登录）<span class="text:italic">（分钟）</span>
             </label>
 
 
@@ -212,7 +212,7 @@
             </label>
 
             <div class="form-desc">
-                选中此复选框可只向禁止抗议玩家的管理员发送抗议通知邮件。
+                选中此复选框可只向封禁该玩家的管理员发送邮件。
             </div>
         </div>
 
@@ -239,7 +239,7 @@
                 清除缓存
             </label>
 
-            {sb_button text="Clear Cache" onclick="xajax_ClearCache();" class="button button-light" id="clearcache" submit=false}
+            {sb_button text="清除缓存" onclick="xajax_ClearCache();" class="button button-light" id="clearcache" submit=false}
 
             <div class="form-desc">
                 单击此按钮，清理缓存文件夹。
@@ -319,7 +319,7 @@
 
         <div class="margin-bottom:half">
             <label for="banlist_hideplayerips" class="form-label form-label:right">
-                定制 Banreasons
+                自定义封禁原因
             </label>
 
             <table width="100%" border="0" style="border-collapse:collapse;" id="custom.reasons" name="custom.reasons">

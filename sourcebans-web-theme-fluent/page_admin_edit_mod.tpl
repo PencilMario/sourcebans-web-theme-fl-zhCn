@@ -48,9 +48,7 @@
                 value="{$steam_universe}" />
 
             <div class="form-desc">
-                (STEAM_<span class="text:bold">X</span>:Y:Z)有些游戏显示 steamid 的方式与其他游戏不同。
-                键入 SteamID 中的第一个数字 (<span class="text:bold">X</span>)取决于该模块如何渲染
-                的渲染方式而定。（默认值：0）。
+                (STEAM_<span class="text:bold">X</span>:Y:Z)有些游戏显示 steamid 的方式与其他游戏不同。键入 SteamID 中的第一个数字 (<span class="text:bold">X</span>)来让sbpp知道如何处理该MOD。（默认值：0）。
             </div>
         </div>
 
@@ -62,7 +60,7 @@
             </label>
 
             <div class="form-desc">
-                选择是否启用此 MOD 并将其分配给禁止和服务器。
+                选择是否启用此 MOD 并将其分配给封禁和服务器。
             </div>
         </div>
 

@@ -13,7 +13,7 @@
 
 <div class="layout_box margin-bottom">
   <div class="layout_box_title flex flex-jc:space-between flex-ai:center">
-    <h2><i class="fa-solid fa-face-angry"></i>最新添加的封禁</h2>
+    <h2><i class="fa-solid fa-face-angry"></i> 最新添加的封禁</h2>
     <span style="text-align: right;">封禁总数：{$total_bans}</span>
   </div>
 
@@ -59,7 +59,7 @@
 <div class="flex flex-ai:start flex-jc:space-bwtween m:flex-fd:column">
   <div class="layout_box flex:11 margin-right margin-bottom">
     <div class="layout_box_title flex flex-jc:space-between flex-ai:center">
-      <h2><i class="fa-solid fa-volume-xmark"></i>最新添加的禁言</h2>
+      <h2><i class="fa-solid fa-volume-xmark"></i> 最新添加的禁言</h2>
       <span style="text-align: right;">累计禁言: {$total_comms}</span>
     </div>
 
@@ -104,8 +104,8 @@
 
   <div class="layout_box flex:11 margin-bottom">
     <div class="layout_box_title flex flex-jc:space-between flex-ai:center">
-      <h2><i class="fa-solid fa-hand"></i>最新阻止连接玩家</h2>
-      <span style="text-align: right;">累计阻止连接{$total_blocked}</span>
+      <h2><i class="fa-solid fa-hand"></i> 最新被阻止连接的玩家</h2>
+      <span style="text-align: right;">累计阻止连接: {$total_blocked}</span>
     </div>
 
     <div class="padding">

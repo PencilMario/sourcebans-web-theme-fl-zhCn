@@ -113,8 +113,7 @@
             </div>
             <div>
                 点击<a href="http://wiki.alliedmods.net/Adding_Admins_%28SourceMod%29#Passwords"
-                    title="SourceMod Password Info" target="_blank" rel="noopener" class="text:bold">这里</a>获取更多
-                信息。
+                    title="SourceMod Password Info" target="_blank" rel="noopener" class="text:bold">这里</a>获取更多信息。
             </div>
         </div>
 

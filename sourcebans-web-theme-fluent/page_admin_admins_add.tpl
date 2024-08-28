@@ -1,4 +1,4 @@
-<div class="layout_box flex:11 admin_tab_content tabcontent" id="Add new admin">
+<div class="layout_box flex:11 admin_tab_content tabcontent" id="添加管理员">
   {if NOT $permission_addadmin}
     <section class="error padding">
       <i class="fas fa-exclamation-circle"></i>
@@ -48,7 +48,7 @@
 
         <div class="margin-bottom:half">
           <label for="email" class="form-label form-label:bottom">
-            管理员电子
+            管理员邮箱
           </label>
 
           <input type="text" TABINDEX=3 class="form-input form-full" id="email" name="email" />
@@ -112,7 +112,7 @@
             disabled="disabled" />
           <div class="form-desc">
             如果选中此复选框，则需要在游戏服务器中指定此密码，然后才能使用管理员权限。
-            <a href="http://wiki.alliedmods.net/Adding_Admins_%28SourceMod%29#Passwords" rel="noopener" target="_blank"
+            <a href="https://wiki.alliedmods.net/Adding_Admins_(SourceMod)/zh#%E5%AF%86%E7%A0%81" rel="noopener" target="_blank"
               class="text:bold">SourceMod 密码说明</a>
           </div>
 

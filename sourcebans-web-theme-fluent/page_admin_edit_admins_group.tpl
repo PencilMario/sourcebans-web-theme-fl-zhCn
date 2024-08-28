@@ -8,7 +8,7 @@
             如需有关某一主题的更多信息或帮助，请将鼠标移至问号上。
         </div>
         <div class="margin-bottom:half">
-            选择您想要的新组<span class="text:bold">{$group_admin_name}</span>将刊登在
+            选择<span class="text:bold">{$group_admin_name}</span>所属的管理组
         </div>
 
         <form action="" method="post">

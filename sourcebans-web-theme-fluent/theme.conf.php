@@ -3,7 +3,7 @@
 define('theme_name', "SourceBans++ Fluent Design Theme Edition [PHP 8.1]");
 
 // Set the author of this theme here
-define('theme_author', "aXenDev + .Rushaway + Hackmastr");
+define('theme_author', "aXenDev + .Rushaway + Hackmastr | Translated by Sir.P");
 
 // Set the version of the theme here
 define('theme_version', "1.8.0 Git 183");

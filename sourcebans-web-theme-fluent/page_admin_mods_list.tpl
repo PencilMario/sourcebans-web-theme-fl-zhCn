@@ -25,7 +25,7 @@
                         <th class="text:left">名称</th>
                         <th class="text:left">MOD文件夹</th>
                         <th>
-                            <span title="SteamID Universe (X of STEAM_X:Y:Z)">SU</span>
+                            <span title="SteamID Universe (X of STEAM_X:Y:Z)">SteamID Universe</span>
                         </th>
                         {if $permission_editmods || $permission_deletemods}
                             <th>操作</th>

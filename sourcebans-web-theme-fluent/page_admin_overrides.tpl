@@ -14,7 +14,7 @@
         </section>
     {else}
         <div class="admin_tab_content_title">
-            <h2><i class="fas fa-cogs"></i>覆盖</h2>
+            <h2><i class="fas fa-cogs"></i>重写</h2>
         </div>
 
         <div class="padding">
@@ -31,16 +31,14 @@
             {/if}
 
             <div>
-                使用重写功能，您可以更改任何命令的标志或权限，无论是全局性的，还是针对特定组的
-                组，而无需编辑插件源代码。
+                使用重写功能，您可以更改任何命令的标志或权限，无论是全局性的，还是针对特定组，而无需编辑插件源代码。
             </div>
             <div>
-                了解更多<a href="http://wiki.alliedmods.net/Overriding_Command_Access_%28SourceMod%29"
+                在 AlliedModders 维基中了解更多<a href="https://wiki.alliedmods.net/Overriding_Command_Access_(SourceMod)/zh"
                     title="Overriding Command Access (SourceMod)" target="_blank" class="text:bold text:italic"
-                    rel="noopener">覆盖命令
-                    访问</a>在 AlliedModders 维基中！
+                    rel="noopener">重写命令权限</a>！
             </div>
-            <p class="text:italic">删除覆盖项名称将删除该覆盖项。</p>
+            <p class="text:italic">删除重写项名称将删除该重写项。</p>
 
             <form action="" method="post">
                 <div class="table table_box">

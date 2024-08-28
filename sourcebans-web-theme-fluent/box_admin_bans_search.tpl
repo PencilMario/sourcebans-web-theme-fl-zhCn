@@ -177,7 +177,7 @@
                                                 onmouseover="if(this.options[this.selectedIndex].value=='other')$('length').setStyle('width', '210px');if(this.options[this.selectedIndex].value=='other')this.focus();"
                                                 onblur="if(this.options[this.selectedIndex].value=='other')$('length').setStyle('width', '20px');">
                                                 <option value="0">永久</option>
-                                                <optgroup label="minutes">
+                                                <optgroup label="分">
                                                     <option value="1">1 分钟</option>
                                                     <option value="5">5 分钟</option>
                                                     <option value="10">10 分钟</option>
@@ -185,7 +185,7 @@
                                                     <option value="30">30 分钟</option>
                                                     <option value="45">45 分钟</option>
                                                 </optgroup>
-                                                <optgroup label="hours">
+                                                <optgroup label="时">
                                                     <option value="60">1 小时</option>
                                                     <option value="120">2 小时</option>
                                                     <option value="180">3 小时</option>
@@ -193,7 +193,7 @@
                                                     <option value="480">8 小时</option>
                                                     <option value="720">12 小时</option>
                                                 </optgroup>
-                                                <optgroup label="days">
+                                                <optgroup label="天">
                                                     <option value="1440">1 天</option>
                                                     <option value="2880">2 天</option>
                                                     <option value="4320">3 天</option>
@@ -201,12 +201,12 @@
                                                     <option value="7200">5 天</option>
                                                     <option value="8640">6 天</option>
                                                 </optgroup>
-                                                <optgroup label="weeks">
+                                                <optgroup label="周">
                                                     <option value="10080">1 周</option>
                                                     <option value="20160">2 周</option>
                                                     <option value="30240">3周</option>
                                                 </optgroup>
-                                                <optgroup label="months">
+                                                <optgroup label="月">
                                                     <option value="40320">1 个月</option>
                                                     <option value="80640">2 个月</option>
                                                     <option value="120960">3 个月</option>

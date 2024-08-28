@@ -10,7 +10,7 @@
 	    <div class="flex flex-fd:column text:right">
 	      <span>版权所有{Config::get('template.title')}</span>
 	      <span><i class="fas fa-code"></i>原版<a href="https://github.com/Rushaway/sourcebans-web-theme-fluent" title="Theme Fluent for SourceBans++" target="_blank" rel="noopener">主题</a> by <a href="https://axendev.net/" title="Theme by aXenDev" target="_blank" rel="noopener">aXenDev</a></span>
-		  <span><i class="fas fa-code"></i>中文翻译<a href="https://github.com/PencilMario/sourcebans-web-theme-fluent" title="Theme Fluent for SourceBans++" target="_blank" rel="noopener">主题</a> by <a href="https://axendev.net/" title="Theme by aXenDev" target="_blank" rel="noopener">Sir.P</a></span>
+		  <span><i class="fas fa-code"></i>中文翻译<a href="https://github.com/PencilMario/sourcebans-web-theme-fl-zhCn" title="Theme Fluent for SourceBans++" target="_blank" rel="noopener">主题</a> by <a href="https://steamcommunity.com/id/PencilMario/" title="Theme by aXenDev" target="_blank" rel="noopener">Sir.P</a></span>
 
 	    </div>
 	  </div>

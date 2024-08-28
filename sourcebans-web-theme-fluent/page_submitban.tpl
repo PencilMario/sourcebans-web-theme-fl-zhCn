@@ -6,18 +6,16 @@
 
         <div class="padding">
             <div>
-                为了保证我们的服务器顺利运行，违反我们规则的人应该受到惩罚，而我们
-                不可能总是随叫随到提供帮助。
+                为了保证我们的服务器顺利运行，违反我们规则的人应该受到惩罚，而我们不可能总是随叫随到提供帮助。
             </div>
             <div>
-                在提交玩家报告时，我们要求您尽可能详细地填写报告，以帮助
-                封禁违规者，这将有助于我们快速处理您的报告。
+                在提交玩家报告时，我们要求您尽可能详细地填写报告，以帮助封禁违规者，这将有助于我们快速处理您的报告。
             </div>
 
             <div class="margin-top:half margin-bottom">
                 如果您不确定如何在游戏内记录证据，请点击
                 <a href="javascript:void(0)"
-                onclick="ShowBox('如何记录证据', '记录违反规则的玩家的证据的最佳方法是使用Shadow Play或Plays.TV。这两款软件都会全天候记录你的游戏，对你的游戏几乎没有影响，你只需要按下一个键绑定就可以录制最近的几分钟游戏，这非常适合抓住违规者。<br /><br />或者，你也可以使用旧方法使用demos进行记录。当你在旁观违规玩家时，按下键盘上的 ` 键以显示开发者控制台。如果没有显示，你需要进入游戏设置并启用它。然后输入 `record [demoname]` 并按回车，文件将会位于游戏目录的mod文件夹中。', 'blue', '', true);">点击此处</a>查看说明。
+                onclick="ShowBox('如何记录证据', '记录违反规则的玩家的证据的最佳方法是使用Shadow Play或Plays.TV。这两款软件都会全天候记录你的游戏，对你的游戏几乎没有影响，你只需要按下一个键绑定就可以录制最近的几分钟游戏，这非常适合抓住违规者。<br /><br />或者，你也可以使用旧方法使用demos进行记录。当你在旁观违规玩家时，按下键盘上的 ` 键以显示开发者控制台。如果没有显示，你需要进入游戏设置并启用它。然后输入 `record [demoname]` 并按回车，文件将会位于游戏文件夹中。', 'blue', '', true);">点击此处 </a>查看说明。
             </div>
 
             <form action="index.php?p=submit" method="post" enctype="multipart/form-data">
@@ -60,8 +58,7 @@
 
                 <div class="margin-bottom:half">
                     <label for="BanReason" class="form-label form-label:bottom">
-                        留言<span class="mandatory">*</span>（请写下有用的
-                        描述性留言。请不要写诸如"这是挂钩"之类的留言）
+                        留言<span class="mandatory">*</span>（请写下有用的描述性留言。请不要写诸如"这是挂钩"之类的留言）
                     </label>
                     <textarea id="BanReason" name="BanReason" class="form-text form-full">{$ban_reason}</textarea>
                 </div>
@@ -115,9 +112,7 @@
             <div class="margin-top">
                 <h3>如果有人被封禁，会发生什么？</h3>
                 <p>
-                    如果您举报的人被封禁，其 SteamID 或 IP 将被列入主
-                    禁言列表中，而且每次他们尝试连接任何服务器时，都会被阻止加入，并
-                    将被记录到我们的数据库中。
+                    如果您举报的人被封禁，其 SteamID 或 IP 将被列入封禁列表中，而且每次他们尝试连接任何服务器时，都会被阻止加入，并将被记录到我们的数据库中。
                 </p>
             </div>
         </div>

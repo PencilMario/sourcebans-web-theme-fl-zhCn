@@ -49,7 +49,7 @@
   <div class="layout_box margin-bottom padding:half flex flex-jc:space-between flex-ai:center m:flex-fd:column">
     <span>
       <a href="index.php?p=commslist&hideinactive={if $hidetext == 'Hide'}true{else}false{/if}{$searchlink|smarty_htmlspecialchars}"
-        title="{$hidetext} inactive">{$hidetext}隐藏解封</a>|<i>总禁言: {$total_bans}</i>
+        title="{$hidetext} inactive">{$hidetext}已解封</a> | <i>总禁言: {$total_bans}</i>
     </span>
     <div class="pagination">
       <span>{$ban_nav}</span>
@@ -62,7 +62,7 @@
         <table class="table_box">
           <thead>
             <tr>
-              <th>模式/类型</th>
+              <th>MOD/类型</th>
               <th class="text:left">日期</th>
               <th class="text:left">玩家</th>
               {if !$hideadminname}
@@ -213,7 +213,7 @@
                             {/if}
                           </li>
                           <li>
-                            <span><i class="fas fa-user-shield"></i>管理员解封</span>
+                            <span><i class="fas fa-user-shield"></i>解封管理员</span>
 
                             {if empty($ban.removedby)}
                               <span class="text:italic">管理员已删除</span>
@@ -241,7 +241,7 @@
                         </li>
                         {if !$hideadminname}
                           <li>
-                            <span><i class="fas fa-ban"></i>被管理员封锁</span>
+                            <span><i class="fas fa-ban"></i>封禁管理员</span>
 
                             {if empty($ban.admin)}
                               <span class="text:italic">管理员已删除</span>

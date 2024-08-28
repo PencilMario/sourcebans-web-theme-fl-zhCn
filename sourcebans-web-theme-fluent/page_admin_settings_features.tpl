@@ -42,7 +42,7 @@
             {/if}
 
             <label for="enable_groupbanning" class="form-label form-label:left">
-                启用Steam组禁止
+                启用Steam组封禁
             </label>
 
             {if !$steamapi}
@@ -63,11 +63,11 @@
             <input type="checkbox" name="enable_friendsbanning" class="form-check" id="enable_friendsbanning" />
 
             <label for="enable_friendsbanning" class="form-label form-label:left">
-                启用好友禁言
+                启用好友封禁
             </label>
 
             <div class="form-desc">
-                如果要启用禁止玩家的所有 steam 社区好友，请选中此复选框。
+                如果要封禁玩家的所有 steam 社区好友，请选中此复选框。
             </div>
 
             <div id="enable_friendsbanning.msg" class="message message:error margin-top:half" style="display: none;">
@@ -78,7 +78,7 @@
             <input type="checkbox" name="enable_adminrehashing" class="form-check" id="enable_adminrehashing" />
 
             <label for="enable_adminrehashing" class="form-label form-label:left">
-                启用管理员重洗
+                启用管理员刷新
             </label>
 
             <div class="form-desc">
@@ -93,11 +93,11 @@
             <input type="checkbox" name="enable_steamlogin" class="form-check" id="enable_steamlogin" />
 
             <label for="enable_steamlogin" class="form-label form-label:left">
-                启用正常登录
+                启用 Steam 登录
             </label>
 
             <div class="form-desc">
-                如果要在登录表单上启用正常登录选项，请选中此复选框。
+                如果要在登录表单上启用 Steam 登录选项，请选中此复选框。
             </div>
 
             <div id="enable_steamlogin.msg" class="message message:error margin-top:half" style="display: none;">

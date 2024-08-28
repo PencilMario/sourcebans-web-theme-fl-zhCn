@@ -48,7 +48,7 @@
 
 <div class="layout_box margin-bottom padding:half flex flex-jc:space-between flex-ai:center m:flex-fd:column">
     <span>
-        <a href="index.php?p=banlist&hideinactive={if $hidetext == 'Hide'}true{else}false{/if}{$searchlink|smarty_htmlspecialchars}" title="{$hidetext} inactive">{$hidetext}隐藏解封</a> | <i>累计封禁：{$total_bans} </i>
+        <a href="index.php?p=banlist&hideinactive={if $hidetext == 'Hide'}true{else}false{/if}{$searchlink|smarty_htmlspecialchars}" title="{$hidetext} inactive">{$hidetext}已解封</a> | <i>累计封禁：{$total_bans} </i>
     </span>
         <div class="pagination">
             <span>{$ban_nav}</span>
@@ -66,7 +66,7 @@
                                 <input type="checkbox" title="Select All" name="tickswitch" id="tickswitch" onclick="TickSelectAll()" class="form-check" />
                             </th>
                         {/if}
-                        <th>模式/国家</th>
+                        <th>MOD/国家</th>
                         <th class="text:left">日期</th>
                         <th class="text:left">玩家</th>
                         {if !$hideadminname}
@@ -240,7 +240,7 @@
                                                             {/if}
                                                         </li>
                                                         <li>
-                                                            <span><i class="fas fa-user-shield"></i>被管理员解禁</span>
+                                                            <span><i class="fas fa-user-shield"></i>解禁管理员</span>
                                                             {if empty($ban.removedby)}
                                                                 <span class="text:italic">管理员已删除</span>
                                                             {else}
@@ -262,7 +262,7 @@
                                                     </li>
                                                     {if !$hideadminname}
                                                         <li>
-                                                            <span><i class="fas fa-ban"></i>被管理员禁言</span>
+                                                            <span><i class="fas fa-ban"></i>封禁管理员</span>
                                                             {if !empty($ban.admin)}
                                                                 <span>{$ban.admin|escape:'html'}</span>
                                                             {else}
@@ -275,7 +275,7 @@
                                                         <span>{$ban.prevoff_link}</span>
                                                     </li>
 			    		                            <li>
-                                                        <span><i class="fas fa-server"></i>禁止于</span>
+                                                        <span><i class="fas fa-server"></i>封禁于</span>
                                                             <span {if $ban.server_id != 0} id="host_{$ban.ban_id}"{/if}>
                                                                 {if $ban.server_id == 0}
                                                                 在线封禁
@@ -285,7 +285,7 @@
                                                             </span>
                                                     </li>
                                                     <li>
-                                                        <span><i class="fas fa-ban"></i>阻止连接 ({$ban.blockcount})</span>
+                                                        <span><i class="fas fa-ban"></i>阻止次数 ({$ban.blockcount})</span>
                                                         {if $ban.banlog == ""}
                                                             <span class="text:italic">未阻止过</span>
                                                         {else}

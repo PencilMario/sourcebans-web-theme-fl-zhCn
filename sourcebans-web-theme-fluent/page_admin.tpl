@@ -21,7 +21,7 @@
             <li>
                 <a href="index.php?p=admin&amp;c=comms">
                     <i class="fas fa-microphone-alt-slash"></i>
-                    <span>通讯</span>
+                    <span>禁言</span>
                 </a>
             </li>
         {/if}

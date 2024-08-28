@@ -57,8 +57,8 @@
 
                 <div class="margin-bottom:half">
                     <label for="a_serverpass" class="form-label form-label:bottom">
-                        服务器密码<a href="http://wiki.alliedmods.net/Adding_Admins_%28SourceMod%29#Passwords"
-                            rel="noopener">更多信息</a>
+                        服务器密码 <a href="https://wiki.alliedmods.net/Adding_Admins_(SourceMod)/zh#%E5%AF%86%E7%A0%81"
+                            rel="noopener">这是什么?</a>
                     </label>
 
                     <div class="flex flex-ai:center">

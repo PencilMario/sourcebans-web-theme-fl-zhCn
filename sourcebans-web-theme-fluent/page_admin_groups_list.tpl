@@ -21,7 +21,7 @@
             单击组查看其权限。
         </div>
 
-        <h3 style="color: var(--table-permanent-text);">网络管理员组 ({$web_group_count})</h3>
+        <h3 style="color: var(--table-permanent-text);">在线管理员组 ({$web_group_count})</h3>
 
         <div class="table table_box">
             <table>
@@ -242,7 +242,7 @@
                 <thead>
                     <tr>
                         <th class="text:left">组名</th>
-                        <th class="text:left">组内管理员</th>
+                        <th class="text:left">组内服务器</th>
                         <th>操作</th>
                     </tr>
                 </thead>

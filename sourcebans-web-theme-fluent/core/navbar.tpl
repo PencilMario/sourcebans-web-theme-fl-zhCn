@@ -81,7 +81,7 @@
       <ul class="layout_topBar_userBar responsive_show:desktop flex flex-ai:center">
         {if $login}
           <li class="margin-right">
-            欢迎<a href='index.php?p=account'><i class="fas fa-user"></i> {$username}</a>
+            欢迎 <a href='index.php?p=account'><i class="fas fa-user"></i> {$username}</a>
           </li>
           <li>
             <a class="button button-important" href='index.php?p=logout'><i class="fas fa-sign-out-alt"></i>
